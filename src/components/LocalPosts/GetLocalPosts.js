@@ -4,45 +4,31 @@ import posts from './posts.js';
 // it's return a json file
 
 class GetLocalPosts extends Component {
-    constructor(props){
-        super(props);
-        this.state = {            
-            posts : posts            
-        };
-       
-    }
- 
-    render() {
-        const {posts} = this.state;
-        return(
-            <div className="main">
-                <ul className="item">
-                {
-                    posts.map(post => (
-                        <li key={post.id} align="start">
-                            <a className="title" >{post.id}.{post.title}</a>
-                            <span>{post.body}</span>
-                        </li>
+ constructor(props){
+    super(props);
+    this.state = {
+        posts : posts
+    };
+}
+fetchData = (post) => {
+  console.log(this.state.currentBody)
+  this.setState({currentBody: post.body})
+  console.log("clicked")
+};
 
-                    ))
-				}
-				<Display></Display>
-
-                </ul>
-
-            </div>
-        );
-    }
+  render() {
+    const postsobjects = this.state.posts.map((post) => 
+      <li key={post.id} align="start">
+        <a onClick={() => this.fetchData(post)} className="title" >{post.id}.{post.title}</a>
+      </li>
+    );
+    return (
+      <div className="parent">
+        {postsobjects}
+        <div className="fetching-box">{this.state.currentBody}</div> 
+      </div>
+    );
   }
-
-
-class Display extends Component {
-	render() {
-        return(
-            <div className="fetching-box"></div>
-
-        );
-    }
 }
   
 export default GetLocalPosts;

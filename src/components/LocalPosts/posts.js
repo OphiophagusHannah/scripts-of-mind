@@ -58,12 +58,6 @@ const posts = [
         "title" : "mvemjson",
         "body" : "VR/AR/Interactive Installation",
         "" : ""
-    },
-    {
-        "id" : 11,
-        "title" : "N>V",
-        "body" : "Digital Art/Ideation/UX",
-        "" : ""
     }
 ];
 
