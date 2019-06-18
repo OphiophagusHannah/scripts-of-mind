@@ -12,14 +12,15 @@ class GetLocalPosts extends Component {
 }
 fetchData = (post) => {
   console.log(this.state.currentBody)
-  this.setState({currentBody: post.body})
+  this.setState({currentBody: post.content})
   console.log("clicked")
 };
 
   render() {
     const postsobjects = this.state.posts.map((post) => 
-      <li key={post.id} align="start">
-        <a onClick={() => this.fetchData(post)} className="title" >{post.id}.{post.title}</a>
+      <li key={post.id} align="start" className="item" onClick={() => this.fetchData(post)}>
+        <a  className="title" >{post.id}.{post.title}</a>
+        <span>{post.body}</span>
       </li>
     );
     return (
