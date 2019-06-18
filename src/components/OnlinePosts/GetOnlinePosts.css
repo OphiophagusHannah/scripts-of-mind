@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+.title {
+    font-size: 32pt;
+    color: black;
+    font-weight: 700;
+    font-family: 'Space Mono';
+}
+
+.item li span {
+    padding-left: 1rem;
+    font-size: 12pt;
+}
+
+.title-secondary {
+    font-size: 12pt;
+    color: darkgrey;
+    font-weight: 400;
+}
+
+.item {
+    margin: 10px;
+    font-size: 20pt;
+    color: violet;
+}
+
+.body {
+    font-size: 16pt;
+    color: darkgrey;
+}
+
+.header {
+	text-align: left;
+	font-size: 12px;
+    width: 100%;
+    text-transform: uppercase;
+    color: lightgrey;
+}
+
+li {
+	border-bottom: 1px solid darkgrey;
+	list-style-type: none;
+    color: grey;
+}
+
+ul {
+	padding-left: 0;
+}
+
+.fetching-box {
+	width: 5rem;
+	height: 100vh;
+	background: darkgrey;
+    opacity: 0.7;
+    color: salmon;
+	position: fixed; 
+	top: 0;
+	right: 0;
+}
