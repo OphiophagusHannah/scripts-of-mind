@@ -24,7 +24,7 @@
 .item {
     margin: 10px;
     font-size: 20pt;
-    color: violet;
+    color: grey;
 }
 
 .body {
@@ -51,8 +51,9 @@ ul {
 }
 
 .fetching-box {
+    padding: 3rem;
 	width: 15rem;
-	height: 100vh;
+	height: 100%;
 	background: darkgrey;
     opacity: 0.7;
     color: black;

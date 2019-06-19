@@ -31,7 +31,7 @@ const posts = [
     },
         {
         "id" : 6,
-        "title" : "workspace",
+        "title" : "work_space",
         "body" : "Machine Learning/UX/UI",
         "content" : "comfort zone"
     },
