@@ -43,13 +43,13 @@ const posts = [
     },
         {
         "id" : 8,
-        "title" : "razda",
+        "title" : "L",
         "body" : "UX/Learning/Information Architecture",
         "content" : " the story and the reason"
     },
             {
         "id" : 9,
-        "title" : "react",
+        "title" : "refract",
         "body" : "Web/UX",
         "content" : "so much research and interactive design"
     },
