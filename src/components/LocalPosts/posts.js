@@ -64,6 +64,12 @@ const posts = [
         "title" : "M<IK",
         "body" : "Concept/DigitalArt/InteractiveArt/Glitch",
         "content": "Wholeness of the kind and wholeness of all.The image is representing accumulation and balance between all the pieces of the human world and the machine world, collected in one form. "
+    },
+        {
+        "id": 12,
+        "title" : "Holo",
+        "body" : "Holography/Kinetics/Physical",
+        "content": "Wholeness of the kind. "
     }
 ];
 

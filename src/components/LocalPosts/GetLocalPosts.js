@@ -7,26 +7,39 @@ class GetLocalPosts extends Component {
  constructor(props){
     super(props);
     this.state = {
-        posts : posts
+        posts : posts,
+        addClass : false,
+        hover: false
     };
+
 }
 fetchData = (post) => {
-  console.log(this.state.currentBody)
   this.setState({currentBody: post.content})
-  console.log("clicked")
 };
 
+toggle() {
+    this.setState({addClass: !this.state.addClass});
+  }
+
+
   render() {
+
+    let boxClass = ["fetching-box"];
+    if(this.state.addClass) {
+      boxClass.push('open');
+    }
     const postsobjects = this.state.posts.map((post) => 
-      <li key={post.id} align="start" className="item" onClick={() => this.fetchData(post)}>
+      <li key={post.id} align="start" className="item"
+      onMouseEnter={() => this.fetchData(post)}>
         <a  className="title" >{post.id}.{post.title}</a>
         <span>{post.body}</span>
       </li>
     );
     return (
       <div className="parent">
+        <div className={boxClass.join(' ')} onClick={this.toggle.bind(this)}>{this.state.currentBody}</div> 
         {postsobjects}
-        <div className="fetching-box">{this.state.currentBody}</div> 
+        
       </div>
     );
   }
