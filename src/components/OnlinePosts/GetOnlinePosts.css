@@ -30,7 +30,7 @@
 
 .parent {
     background-image: linear-gradient(319deg, #e4ff6d 0%, #ffad42 37%, #e4ff6d 100%);
-    width: 80%;
+
 }
 
 .item:hover {
@@ -66,15 +66,17 @@ ul {
 }
 
 .fetching-box {
+
     padding: 3rem;
 	width: 15%;
 	height: 100%;
-	background: white;
+    padding-left: 15rem;
     opacity: 1;
     color: black;
 	position: fixed; 
 	top: 0;
 	right: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, rgba(255, 255, 255, 1) 45%);
     transition: .4s ease;
 }
 

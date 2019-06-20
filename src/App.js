@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Ophiophagus Hannah</h1>
+        <h1>ophiophagus_hannah :: scripts of mind</h1>
         <GetLocalPosts/>
 
       </div>
