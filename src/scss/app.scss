@@ -2,6 +2,7 @@
 
 .top {
   font-size: 18px;
+  color: grey;
   position: fixed;
   left: 0;
   top: 0;
@@ -17,7 +18,7 @@
 * { -ms-overflow-style: none; }
 
 .title {
-  font-size: 32pt;
+  font-size: 49pt;
   color: black;
   font-weight: 700;
   font-family: 'Space Mono';
@@ -33,12 +34,12 @@
 .item {
   display: flex;
   align-items: baseline;
-  height: 5rem;
+  //height: 5rem;
   font-size: 20pt;
   color: grey;
   background: white;
   cursor: pointer;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 28px, rgba(255, 255, 255, 1) 75%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
   transition: .4s ease;
 
   span {
@@ -49,11 +50,15 @@
 
   &:hover {
     background: none;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, rgba(255, 255, 255, 1) 75%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
     transition: .4s ease;
 
+    .title {
+      color: white;
+    }
+
     span {
-      color: black;
+      color: white;
     }
   }
 }
@@ -61,7 +66,7 @@
 .parent {
   margin-top: 30px;
   padding-top: 7px;
-  background-image: linear-gradient(319deg, #e4ff6d 0%, #FF4500 37%, #e4ff6d 100%);
+  background-image: linear-gradient(340deg, #e4ff6d 0%, #FF4500 47%,  #aa00ff 77%, #cc4499 100%);
 }
 
 .body {
@@ -98,7 +103,7 @@ ul {
   position: fixed; 
   top: 0;
   right: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, rgba(255, 255, 255, 0) 45%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   transition: .4s ease;
 
   .close-button {
@@ -117,7 +122,7 @@ ul {
     width: 90%;
     opacity: 1;
     overflow: scroll;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 28px, rgba(255, 255, 255, 1) 45%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     transition: .4s ease;
 
     .close-button {

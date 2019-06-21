@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
 .top {
   font-size: 18px;
+  color: grey;
   position: fixed;
   left: 0;
   top: 0;
@@ -22,7 +23,7 @@
 }
 
 .title {
-  font-size: 32pt;
+  font-size: 49pt;
   color: black;
   font-weight: 700;
   font-family: 'Space Mono';
@@ -42,12 +43,12 @@
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  height: 5rem;
   font-size: 20pt;
   color: grey;
   background: white;
   cursor: pointer;
-  background-image: linear-gradient(to right, white 28px, white 75%);
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: linear-gradient(to right, white 0%, white 100%);
   -webkit-transition: .4s ease;
   transition: .4s ease;
 }
@@ -60,19 +61,24 @@
 
 .item:hover {
   background: none;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, white 75%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   -webkit-transition: .4s ease;
   transition: .4s ease;
 }
 
+.item:hover .title {
+  color: white;
+}
+
 .item:hover span {
-  color: black;
+  color: white;
 }
 
 .parent {
   margin-top: 30px;
   padding-top: 7px;
-  background-image: linear-gradient(319deg, #e4ff6d 0%, #FF4500 37%, #e4ff6d 100%);
+  background-image: linear-gradient(340deg, #e4ff6d 0%, #FF4500 47%, #aa00ff 77%, #cc4499 100%);
 }
 
 .body {
@@ -108,7 +114,8 @@ ul {
   position: fixed;
   top: 0;
   right: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, rgba(255, 255, 255, 0) 45%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   -webkit-transition: .4s ease;
   transition: .4s ease;
 }
@@ -131,7 +138,8 @@ ul {
   width: 90%;
   opacity: 1;
   overflow: scroll;
-  background-image: linear-gradient(to right, white 28px, white 45%);
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: linear-gradient(to right, white 0%, white 100%);
   -webkit-transition: .4s ease;
   transition: .4s ease;
 }
