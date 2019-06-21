@@ -8,9 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>ophiophagus_hannah :: scripts of mind</h1>
+        <h1 className="top">ophiophagus_hannah  :: scripts of mind :: thought of mine :: words on mind :: more of mine :: part of me :: speak to me</h1>
         <GetLocalPosts/>
-
       </div>
     );
   }
