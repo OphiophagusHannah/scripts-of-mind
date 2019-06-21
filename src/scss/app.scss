@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+.top {
+  font-size: 18px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  background: white;
+}
+  
+*::-webkit-scrollbar { width: 0 !important }
+
+* { overflow: -moz-scrollbars-none; }
+
+* { -ms-overflow-style: none; }
+
+.title {
+  font-size: 32pt;
+  color: black;
+  font-weight: 700;
+  font-family: 'Space Mono';
+  padding-top: 1rem;
+}
+
+.title-secondary {
+  font-size: 12pt;
+  color: darkgrey;
+  font-weight: 400;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  height: 5rem;
+  font-size: 20pt;
+  color: grey;
+  background: white;
+  cursor: pointer;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 28px, rgba(255, 255, 255, 1) 75%);
+  transition: .4s ease;
+
+  span {
+    padding-left: 1rem;
+    font-size: 12pt;
+    color: grey;
+  }
+
+  &:hover {
+    background: none;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, rgba(255, 255, 255, 1) 75%);
+    transition: .4s ease;
+
+    span {
+      color: black;
+    }
+  }
+}
+
+.parent {
+  margin-top: 30px;
+  padding-top: 7px;
+  background-image: linear-gradient(319deg, #e4ff6d 0%, #FF4500 37%, #e4ff6d 100%);
+}
+
+.body {
+  font-size: 16pt;
+  color: darkgrey;
+}
+
+.header {
+  text-align: left;
+  font-size: 12px;
+  width: 100%;
+  text-transform: uppercase;
+  color: lightgrey;
+}
+
+li {
+  //border-bottom: 1px solid darkgrey;
+  list-style-type: none;
+  color: grey;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.fetching-box {
+  padding: 3rem;
+  padding-top: 30%;
+  width: 15%;
+  height: 100%;
+  padding-left: 15rem;
+  opacity: 1;
+  color: black;
+  position: fixed; 
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 28px, rgba(255, 255, 255, 0) 45%);
+  transition: .4s ease;
+
+  .close-button {
+          display: none;
+  }
+
+  .main-image {
+    display: flex;
+  }
+
+  .post-content {
+    display: none;
+  }
+  
+  &.open {
+    width: 90%;
+    opacity: 1;
+    overflow: scroll;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 28px, rgba(255, 255, 255, 1) 45%);
+    transition: .4s ease;
+
+    .close-button {
+      display: block;
+      position: fixed;
+      top: 3rem;
+      right: 3rem;
+      width: 6rem;
+      height: 3rem;
+      background: #e4ff6d;
+    }
+
+    .main-image {
+      display: none;
+    }
+
+    .post-content {
+      display: block;
+      width: 70%;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.list {
+  overflow: scroll;
+}

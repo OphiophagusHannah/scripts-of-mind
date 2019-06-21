@@ -8,7 +8,7 @@ const posts = [
     },
     {
         "id" : 2,
-        "title" : "gallery: ink",
+        "title" : "gallery:ink",
         "span" : "Web/AR/Traditional",
         "image" : "https://rightsizefacility.com/wp-content/uploads/2017/11/verticalplaceholderimage-440x680.png",
         "content" : "Personal virtual gallery that combines two explorations: exploration of WebGL framework and virtual 3D experience, exploration of Technologies of Painting Materials."

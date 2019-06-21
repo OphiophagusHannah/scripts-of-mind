@@ -34,7 +34,7 @@ toggle() {
     const postsobjects = this.state.posts.map((post) => 
       <li key={post.id} align="start" className="item"
       onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
-        <div  className="title" >{post.id}.{post.title}</div>
+        <div  className="title" >{post.id}⋅⋅{post.title}</div>
         <span>{post.span}</span>
       </li>
     );
