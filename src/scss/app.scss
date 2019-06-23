@@ -136,12 +136,12 @@ ul {
 
 .fetching-box {
   overflow-y: none;
-  padding-top: 30%;
-  width: 0;
-  height: 100%;
+  padding-top: 0;
+  //width: 0;
+  //height: 100%;
   opacity: 1;
   color: black;
-  position: fixed; 
+  //position: fixed; 
   top: 0;
   right: 0;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
@@ -160,9 +160,10 @@ ul {
   }
   
   &.open {
-    width: 100%;
+    //width: 100%;
     opacity: 1;
-    overflow-y: scroll;
+    padding-top: 15%;
+    //overflow-y: scroll;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     transition: .4s ease;
 
@@ -196,10 +197,11 @@ ul {
 }
 
 .home-list {
-  overflow-y: scroll;
+  //overflow-y: scroll;
 }
 .home-list.closed {
-  overflow-y: hidden;
+  //overflow-y: hidden;
+  display: none;
 }
 
 // .menu-item {

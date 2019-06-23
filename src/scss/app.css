@@ -150,12 +150,9 @@ ul {
 
 .fetching-box {
   overflow-y: none;
-  padding-top: 30%;
-  width: 0;
-  height: 100%;
+  padding-top: 0;
   opacity: 1;
   color: black;
-  position: fixed;
   top: 0;
   right: 0;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
@@ -179,9 +176,8 @@ ul {
 }
 
 .fetching-box.open {
-  width: 100%;
   opacity: 1;
-  overflow-y: scroll;
+  padding-top: 15%;
   background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
   background-image: linear-gradient(to right, white 0%, white 100%);
   -webkit-transition: .4s ease;
@@ -215,11 +211,7 @@ ul {
   height: auto;
 }
 
-.home-list {
-  overflow-y: scroll;
-}
-
 .home-list.closed {
-  overflow-y: hidden;
+  display: none;
 }
 /*# sourceMappingURL=app.css.map */
