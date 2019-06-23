@@ -31,6 +31,11 @@ toggle() {
       boxClass.push('open');
     }
 
+    let homeClass = ["home-list"];
+    if(this.state.addClass) {
+      homeClass.push('closed');
+    }
+
     const postsobjects = this.state.posts.map((post) => 
       <li key={post.id} align="start" className="item"
       onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
@@ -49,7 +54,7 @@ toggle() {
           </div>
           <div className="close-button" onClick={this.toggle.bind(this)}></div>
         </div> 
-        <div className="list">{postsobjects}</div>
+        <div className={homeClass.join(' ')} >{postsobjects}</div>
       </div>
     );
   }

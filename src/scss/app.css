@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+.under {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 3;
+  background: white;
+}
+
 .top {
   font-size: 18px;
   color: grey;
@@ -8,6 +19,40 @@
   margin: 0;
   width: 100%;
   background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 4;
+  background: linear-gradient(340deg, #e4ff6d 0%, #FF4500 47%, #aa00ff 77%, #cc4499 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.top ul {
+  margin: 0;
+}
+
+.top a {
+  color: grey;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+
+.top a:hover {
+  color: salmon;
+  text-decoration: underline;
+}
+
+.top a:before {
+  content: '::';
+  padding: 0 .5rem;
+}
+
+.top a:first-child:before {
+  display: none;
 }
 
 *::-webkit-scrollbar {
@@ -104,11 +149,10 @@ ul {
 }
 
 .fetching-box {
-  padding: 3rem;
+  overflow-y: none;
   padding-top: 30%;
-  width: 15%;
+  width: 0;
   height: 100%;
-  padding-left: 15rem;
   opacity: 1;
   color: black;
   position: fixed;
@@ -135,9 +179,9 @@ ul {
 }
 
 .fetching-box.open {
-  width: 90%;
+  width: 100%;
   opacity: 1;
-  overflow: scroll;
+  overflow-y: scroll;
   background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
   background-image: linear-gradient(to right, white 0%, white 100%);
   -webkit-transition: .4s ease;
@@ -147,8 +191,9 @@ ul {
 .fetching-box.open .close-button {
   display: block;
   position: fixed;
+  cursor: pointer;
   top: 3rem;
-  right: 3rem;
+  left: 3rem;
   width: 6rem;
   height: 3rem;
   background: #e4ff6d;
@@ -170,7 +215,11 @@ ul {
   height: auto;
 }
 
-.list {
-  overflow: scroll;
+.home-list {
+  overflow-y: scroll;
+}
+
+.home-list.closed {
+  overflow-y: hidden;
 }
 /*# sourceMappingURL=app.css.map */
