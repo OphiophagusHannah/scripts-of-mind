@@ -52,9 +52,13 @@ toggle() {
           <div className="post-content">
             <h2 className="title">{this.state.currentTitle}</h2>
             <p>{this.state.currentContent}</p>
-            <div className="button-next" >Next</div>
+            <div className="prev-next">
+              <div className="button-prev" >prev</div>
+              <div className="button-next" >next</div>
+            </div>
+
           </div>
-          <div className="close-button" onClick={this.toggle.bind(this)}></div>
+          <div className="close-button" onClick={this.toggle.bind(this)}>close</div>
         </div> 
         <div className={homeClass.join(' ')} >{postsobjects}
         <NavLink activeClassName="active" to="/about">
