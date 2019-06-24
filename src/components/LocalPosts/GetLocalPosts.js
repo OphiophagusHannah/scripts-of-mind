@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import posts from './posts.js';
+import { NavLink, Link } from "react-router-dom";
 // get posts from online api
 // it's return a json file
 
@@ -51,11 +52,17 @@ toggle() {
           <div className="post-content">
             <h2 className="title">{this.state.currentTitle}</h2>
             <p>{this.state.currentContent}</p>
+            <div className="button-next" >Next</div>
           </div>
           <div className="close-button" onClick={this.toggle.bind(this)}></div>
         </div> 
-        <div className={homeClass.join(' ')} >{postsobjects}</div>
+        <div className={homeClass.join(' ')} >{postsobjects}
+        <NavLink activeClassName="active" to="/about">
+          thought of mine
+        </NavLink></div>
+
       </div>
+
     );
   }
 }

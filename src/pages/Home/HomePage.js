@@ -5,9 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 const HomePage = () => (
   <Fragment>
     <GetLocalPosts/>
-    <NavLink activeClassName="active" to="/about">
-              thought of mine
-            </NavLink>
+
   </Fragment>
 );
 
