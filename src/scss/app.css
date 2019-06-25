@@ -188,9 +188,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -216,6 +216,7 @@ ul {
   cursor: pointer;
   font-size: 14px;
   line-height: 14px;
+  margin-left: 1rem;
 }
 
 .fetching-box.open .close-button {
@@ -259,5 +260,11 @@ ul {
 
 .home-list.closed {
   display: none;
+}
+
+.galimage {
+  max-height: 15rem;
+  height: 15rem;
+  width: auto;
 }
 /*# sourceMappingURL=app.css.map */

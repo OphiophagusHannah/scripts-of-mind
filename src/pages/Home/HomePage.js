@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import GetLocalPosts from '../../components/LocalPosts/GetLocalPosts';
+import GetLocalProjects from '../../components/LocalProjects/GetLocalProjects';
 import { NavLink, Link } from "react-router-dom";
 
 const HomePage = () => (
   <Fragment>
-    <GetLocalPosts/>
+    <GetLocalProjects/>
 
   </Fragment>
 );

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import posts from './posts.js';
+import posts from './projects.js';
 import { NavLink, Link } from "react-router-dom";
 // get posts from online api
 // it's return a json file
 
-class GetLocalPosts extends Component {
+class GetLocalProjects extends Component {
  constructor(props){
     super(props);
     this.state = {
@@ -21,8 +21,6 @@ fetchData = (post) => {
     currentTitle : post.title
   })
 };
-
-
 
 toggle() {
     this.setState({addClass: !this.state.addClass});
@@ -63,11 +61,9 @@ toggle() {
           <div className="close-button" onClick={this.toggle.bind(this)}>close</div>
         </div> 
         <div className={homeClass.join(' ')} >{postsobjects}
-
-        
-        <NavLink activeClassName="active" to="/drawings">
-    more of mine
-            </NavLink></div>
+        <NavLink activeClassName="active" to="/about">
+          thought of mine
+        </NavLink></div>
 
       </div>
 
@@ -75,4 +71,4 @@ toggle() {
   }
 }
   
-export default GetLocalPosts;
+export default GetLocalProjects;

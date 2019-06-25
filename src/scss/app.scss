@@ -170,7 +170,7 @@ ul {
     .prev-next {
       // position: fixed;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       bottom: 5rem;
       right: 3rem;
@@ -188,6 +188,7 @@ ul {
       cursor: pointer;
       font-size: 14px;
       line-height: 14px;
+      margin-left: 1rem;
     }
 
     .close-button {
@@ -231,6 +232,12 @@ ul {
 .home-list.closed {
   //overflow-y: hidden;
   display: none;
+}
+
+.galimage {
+  max-height: 15rem;
+  height: 15rem;
+  width: auto;
 }
 
 // .menu-item {
