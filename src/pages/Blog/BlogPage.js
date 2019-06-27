@@ -5,9 +5,11 @@ import GetLocalPosts from '../../components/LocalPosts/GetLocalPosts';
 
 const BlogPage = () => (
   <Fragment>
-        <h1>Process and progress</h1>
+    <h1>Process and progress</h1>
     <GetLocalPosts/>
-
+    <NavLink className="jump-next next-blog" to="/drawings">
+      more of mine
+    </NavLink>
   </Fragment>
 );
 

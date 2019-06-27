@@ -4,7 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 const ContactPage = () => (
   <Fragment>
     <h1>Hallllo</h1>
-    <NavLink activeClassName="active" to="/">
+    <NavLink className="jump-next next-blog" to="/">
     scripts of mind
             </NavLink>
   </Fragment>

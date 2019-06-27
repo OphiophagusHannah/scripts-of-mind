@@ -5,7 +5,6 @@ import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Navigation = styled.header`
-
   .fa-bars {
     display: none;
     color: #222;
@@ -112,22 +111,12 @@ class Nav extends Component {
 
     return (
       <Navigation>
-          <div className="under">
-          </div>
+        <div className="under"></div>
         <nav className="nav top">
-     
-          <i
-            className="fa fa-bars"
-            aria-hidden="true"
-            onClick={e => this.handleToggle(e)}
-          />
-
-
-
+          <i className="fa fa-bars" aria-hidden="true" onClick={e => this.handleToggle(e)}/>
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
-          
             <NavLink activeClassName="active" to="/">
-            ophiophagus_hannah :: scripts of mind
+              ophiophagus_hannah :: scripts of mind
             </NavLink>
             <NavLink activeClassName="active" to="/about">
               thought of mine

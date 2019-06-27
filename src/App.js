@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import './scss/app.css';
-import GetLocalPosts from './components/LocalPosts/GetLocalPosts';
 
 // NAVIGATION
 import Nav from "./components/Nav";
@@ -26,7 +25,6 @@ class App extends Component {
           <Route exact path="/media" component={Media} />
           <Route exaxt path="/blog" component={Blog} />
           <Route exact path="/drawings" component={DrawingsPage} />
-     
       </div>
     );
   }

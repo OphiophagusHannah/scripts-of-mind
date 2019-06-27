@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
+.body {
+  font-size: 16pt;
+  color: darkgrey;
+}
+
+.header {
+  text-align: left;
+  font-size: 12px;
+  width: 100%;
+  text-transform: uppercase;
+  color: lightgrey;
+}
+
 .under {
   position: fixed;
   left: 0;
@@ -30,6 +43,7 @@
 
 .top ul {
   margin: 0;
+  padding-left: 0;
 }
 
 .top a {
@@ -67,7 +81,19 @@
   -ms-overflow-style: none;
 }
 
-.title {
+.jump-next {
+  color: grey;
+  padding: 2rem;
+  height: 4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.jump-next:hover {
+  text-decoration: underline;
+}
+
+.project-title {
   font-size: 49pt;
   color: black;
   font-weight: 700;
@@ -75,13 +101,13 @@
   padding-top: 1rem;
 }
 
-.title-secondary {
+.project-subtitle {
   font-size: 12pt;
   color: darkgrey;
   font-weight: 400;
 }
 
-.item {
+.project-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,13 +124,14 @@
   transition: .4s ease;
 }
 
-.item span {
+.project-item span {
   padding-left: 1rem;
   font-size: 12pt;
   color: grey;
 }
 
-.item:hover {
+.project-item:hover {
+  color: white;
   background: none;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
@@ -112,39 +139,26 @@
   transition: .4s ease;
 }
 
-.item:hover .title {
+.project-item:hover .project-title {
   color: white;
 }
 
-.item:hover span {
+.project-item:hover span {
   color: white;
 }
 
-.parent {
+.home-parent {
   margin-top: 30px;
   padding-top: 7px;
   background-image: linear-gradient(340deg, #e4ff6d 0%, #FF4500 47%, #aa00ff 77%, #cc4499 100%);
 }
 
-.body {
-  font-size: 16pt;
-  color: darkgrey;
-}
-
-.header {
-  text-align: left;
-  font-size: 12px;
-  width: 100%;
-  text-transform: uppercase;
-  color: lightgrey;
-}
-
-li {
+.home-parent li {
   list-style-type: none;
   color: grey;
 }
 
-ul {
+.home-parent ul {
   padding-left: 0;
 }
 
@@ -262,9 +276,210 @@ ul {
   display: none;
 }
 
+.focus-list li {
+  list-style-type: none;
+}
+
+.next-blog {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.blog-box {
+  padding-top: 0;
+  opacity: 1;
+  color: black;
+  top: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.blog-box .close-button {
+  display: none;
+}
+
+.blog-box .post-content {
+  display: none;
+}
+
+.blog-box.open {
+  opacity: 1;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: linear-gradient(to right, white 0%, white 100%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.blog-box.open .prev-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 5rem;
+  right: 3rem;
+}
+
+.blog-box.open .button-next, .blog-box.open .button-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 1rem;
+}
+
+.blog-box.open .close-button {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  top: 5rem;
+  right: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.blog-box.open .post-content {
+  display: block;
+  width: 70%;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.blog-list.closed {
+  opacity: 0.6;
+  display: none;
+}
+
+.skill-list li {
+  list-style-type: none;
+}
+
 .galimage {
-  max-height: 15rem;
-  height: 15rem;
-  width: auto;
+  width: 15rem;
+  height: auto;
+}
+
+.art-list.closed {
+  opacity: 0.6;
+  display: none;
+}
+
+.art-box {
+  padding-top: 0;
+  opacity: 1;
+  color: black;
+  top: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.art-box .close-button {
+  display: none;
+}
+
+.art-box .post-content {
+  display: none;
+}
+
+.art-box.open {
+  opacity: 1;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
+  background-image: linear-gradient(to right, white 0%, white 100%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.art-box.open .prev-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 5rem;
+  right: 3rem;
+}
+
+.art-box.open .button-next, .art-box.open .button-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 1rem;
+}
+
+.art-box.open .close-button {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  top: 5rem;
+  right: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.art-box.open .post-content {
+  display: block;
+  width: 70%;
+  font-size: 22px;
+  line-height: 32px;
 }
 /*# sourceMappingURL=app.css.map */

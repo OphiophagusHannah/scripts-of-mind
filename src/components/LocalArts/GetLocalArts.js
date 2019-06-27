@@ -27,45 +27,41 @@ toggle() {
   }
 
   render() {
-    let boxClass = ["fetching-box"];
+    let boxClass = ["art-box"];
     if(this.state.addClass) {
       boxClass.push('open');
     }
 
-    let homeClass = ["home-list"];
+    let homeClass = ["art-list"];
     if(this.state.addClass) {
       homeClass.push('closed');
     }
 
     const postsobjects = this.state.posts.map((post) => 
-      <li key={post.id} align="start" className="item"
+      <div key={post.id} align="start" className="item"
       onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
-        <div  className="title" ><img className="galimage" src={post.image}/>⋅⋅{post.title}</div>
-      </li>
+        <div  className="title" ><img className="galimage" src={post.image}/><br/><h3>{post.title}</h3></div>
+      </div>
     );
 
     return (
       <div className="parent">
         <div className={boxClass.join(' ')} >
-          {/* <img className="main-image" src={this.state.currentBody}/> */}
           <div className="post-content">
+            <img className="galimage" src={this.state.currentBody} />
             <h2 className="title">{this.state.currentTitle}</h2>
             <p>{this.state.currentContent}</p>
             <div className="prev-next">
-              <div className="button-prev" >prev</div>
-              <div className="button-next" >next</div>
+              <div className="button-prev">prev</div>
+              <div className="button-next">next</div>
             </div>
 
           </div>
           <div className="close-button" onClick={this.toggle.bind(this)}>close</div>
         </div> 
-        <div className={homeClass.join(' ')} >{postsobjects}
-        <NavLink activeClassName="active" to="/about">
-          thought of mine
-        </NavLink></div>
+        <div className={homeClass.join(' ')} >{postsobjects}</div>
 
       </div>
-
     );
   }
 }
