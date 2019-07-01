@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import './scss/app.css';
+import '../node_modules/aos/dist/aos.css'; 
+import AOS from 'aos';
 
 // NAVIGATION
 import Nav from "./components/Nav";
@@ -15,6 +17,15 @@ import Blog from "./pages/Blog/BlogPage";
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    AOS.init();
+  }
+
+  componentWillReceiveProps (){ 
+    AOS.refresh(); 
+  } 
+  
   render() {
     return (
       <div>

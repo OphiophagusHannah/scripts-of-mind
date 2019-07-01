@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import posts from './projects.js';
-import { NavLink, Link } from "react-router-dom";
 // get posts from online api
 // it's return a json file
 
@@ -11,14 +10,33 @@ class GetLocalProjects extends Component {
         posts : posts,
         addClass : false,
         hover: false
-    };
+    };  
 }
+
 
 fetchData = (post) => {
   this.setState({
     currentBody: post.image, 
     currentContent: post.content,
-    currentTitle : post.title
+    currentTitle : post.title,
+    currentDescription: post.description,
+    currentProblem : post.problem,
+    currentPurpose : post.purpose,
+    currentNote : post.note,
+    currentStructure : post.structure,
+    currentInteraction : post.interaction,
+    currentDiscussion : post.discussion,
+    currentAdditional : post.additional,
+    currentFurther : post.further,
+    currentDate_start : post.date_start,
+    currentDate_end : post.date_end,
+    currentIn_process : post.in_process,
+    currentComplete : post.complete,
+    currentPersonal : post.personal,
+    currentRole : post.role,
+    currentSkills: post.skills,
+    currentDeliverable : post.poc_type,
+    currentLink : post.link,
   })
 };
 
@@ -37,11 +55,27 @@ toggle() {
       homeClass.push('closed');
     }
 
+    let aosDelay = 50;
+
+    let out = {};
+    for (let key in this.state) {
+      if (!this.state.hasOwnProperty(key)) {
+        continue;
+      }
+
+      let render_key = key.replace('current', '__');
+      let lowkey = render_key.toLocaleLowerCase();
+
+      if(this.state[key] ){
+        out[key] = <div className={lowkey} ><h3>{lowkey}</h3>{this.state[key]}</div>;
+      }
+    }
+
     const postsobjects = this.state.posts.map((post) => 
       <li key={post.id} align="start" className="project-item"
       onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
-        <div className="project-title">{post.id}⋅⋅{post.title}</div>
-        <span>{post.span}</span>
+        <div data-aos="fade-left" data-aos-delay={aosDelay + post.id*50} className="project-title">{post.id}⋅⋅{post.title}</div>
+        <span data-aos="fade-left" data-aos-delay={aosDelay + post.id*50}>{post.span}</span>
       </li>
     );
 
@@ -51,7 +85,27 @@ toggle() {
           {/* <img className="main-image" src={this.state.currentBody}/> */}
           <div className="post-content">
             <h2 className="project-title">{this.state.currentTitle}</h2>
-            <p>{this.state.currentContent}</p>
+            <div className="project-content">
+              {out.currentDescription}
+              {out.currentProblem}
+              {out.currentPurpose}
+              {out.currentNote}
+              {out.currentStructure}
+              {out.currentInteraction}
+              {out.currentDiscussion}
+              {out.currentAdditional}
+              {out.currentFurther}
+              {out.currentDate_start}
+              {out.currentDate_end}
+              {out.currentIn_process}
+              {out.currentComplete}
+              {out.currentPersonal}
+              {out.currentRole}
+              {out.currentSkills}
+              {out.currentDeliverable}
+              {out.currentLink}
+            </div>
+              
             <div className="prev-next">
               <div className="button-prev" >prev</div>
               <div className="button-next" >next</div>

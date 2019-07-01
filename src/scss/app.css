@@ -4,6 +4,16 @@
   color: darkgrey;
 }
 
+.bottom-padding {
+  height: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .header {
   text-align: left;
   font-size: 12px;
@@ -222,13 +232,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #FF4500;
+  color: #FF4500;
   width: 4rem;
   height: 4rem;
-  color: white;
   border-radius: 50%;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 700;
   line-height: 14px;
   margin-left: 1rem;
 }
@@ -249,9 +259,9 @@
   right: 3rem;
   width: 4rem;
   height: 4rem;
-  color: white;
   border-radius: 50%;
-  background: #aa00ff;
+  color: #aa00ff;
+  font-weight: 700;
   font-size: 14px;
   line-height: 14px;
 }

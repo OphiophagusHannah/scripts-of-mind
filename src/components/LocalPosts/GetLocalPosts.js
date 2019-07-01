@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import posts from './posts.js';
-import { NavLink, Link } from "react-router-dom";
 
 class GetLocalPosts extends Component {
  constructor(props){

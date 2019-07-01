@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import posts from './arts.js';
-import { NavLink, Link } from "react-router-dom";
 // get posts from online api
 // it's return a json file
 
@@ -40,7 +39,7 @@ toggle() {
     const postsobjects = this.state.posts.map((post) => 
       <div key={post.id} align="start" className="item"
       onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
-        <div  className="title" ><img className="galimage" src={post.image}/><br/><h3>{post.title}</h3></div>
+        <div  className="title" ><img className="galimage" alt="preview-art" src={post.image}/><br/><h3>{post.title}</h3></div>
       </div>
     );
 
@@ -48,7 +47,7 @@ toggle() {
       <div className="parent">
         <div className={boxClass.join(' ')} >
           <div className="post-content">
-            <img className="galimage" src={this.state.currentBody} />
+            <img className="galimage" alt="alt" src={this.state.currentBody} />
             <h2 className="title">{this.state.currentTitle}</h2>
             <p>{this.state.currentContent}</p>
             <div className="prev-next">
