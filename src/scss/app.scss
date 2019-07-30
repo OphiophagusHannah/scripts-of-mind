@@ -7,8 +7,29 @@
 // 'pages/gallery.scss',
 // 'pages/contact.scss';
 
-
 //Base
+
+$breakpoints: (
+  'small':  ( min-width:  767px ),
+  'medium': ( min-width:  992px ),
+  'large':  ( min-width: 1200px )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
 
 .body {
   font-size: 16pt;
@@ -104,11 +125,16 @@
 
 //HomePage
 .project-title {
-  font-size: 49pt;
+  font-size: 16pt;
   color: black;
   font-weight: 700;
   font-family: 'Space Mono';
   padding-top: 1rem;
+
+  @include respond-to('small') {
+    font-size: 48pt;
+    
+  }
 }
 
 .project-subtitle {
@@ -120,25 +146,32 @@
 .project-item {
   display: flex;
   align-items: baseline;
+  flex-direction: column;
+  @include respond-to('small') {
+    flex-direction: row;  
+  }
   //height: 5rem;
   font-size: 20pt;
   color: grey;
   background: white;
   cursor: pointer;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  transition: .4s ease;
+  transition: .7s ease;
 
   span {
     padding-left: 1rem;
-    font-size: 12pt;
+    font-size: 9pt;
     color: grey;
+    @include respond-to('small') {
+      font-size: 12pt;
+    }
   }
 
   &:hover {
     color: white;
     background: none;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
-    transition: .4s ease;
+    transition: .7s ease;
 
     .project-title {
       color: white;
@@ -364,6 +397,53 @@
 }
 
 //GalleryPage
+
+
+.react-tabs {
+  display: flex;
+  padding-top: 5rem;
+
+  ul {
+
+    
+    li {
+      list-style-type: none;
+      color: grey;
+      
+      &:focus {
+        text-decoration: underline;
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+        color: black;
+        text-decoration: underline;
+      }
+    }
+
+    .react-tabs__tab--selected {
+      color: black;
+      font-weight: 700;
+    }
+  }
+}
+
+.tab-panel {
+  padding: 0 5rem;
+
+  h1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: lightgrey;
+    font-size: 6rem;
+    margin: auto;
+    margin-top: 0;
+  }
+}
 
 .galimage {
   width: 15rem;

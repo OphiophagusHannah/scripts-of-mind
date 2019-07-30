@@ -11,36 +11,35 @@ class GetLocalProjects extends Component {
         addClass : false,
         hover: false
     };  
-}
+  }
 
+  fetchData = (post) => {
+    this.setState({
+      currentBody: post.image, 
+      currentContent: post.content,
+      currentTitle : post.title,
+      currentDescription: post.description,
+      currentProblem : post.problem,
+      currentPurpose : post.purpose,
+      currentNote : post.note,
+      currentStructure : post.structure,
+      currentInteraction : post.interaction,
+      currentDiscussion : post.discussion,
+      currentAdditional : post.additional,
+      currentFurther : post.further,
+      currentDate_start : post.date_start,
+      currentDate_end : post.date_end,
+      currentIn_process : post.in_process,
+      currentComplete : post.complete,
+      currentPersonal : post.personal,
+      currentRole : post.role,
+      currentSkills: post.skills,
+      currentDeliverable : post.poc_type,
+      currentLink : post.link,
+    })
+  };
 
-fetchData = (post) => {
-  this.setState({
-    currentBody: post.image, 
-    currentContent: post.content,
-    currentTitle : post.title,
-    currentDescription: post.description,
-    currentProblem : post.problem,
-    currentPurpose : post.purpose,
-    currentNote : post.note,
-    currentStructure : post.structure,
-    currentInteraction : post.interaction,
-    currentDiscussion : post.discussion,
-    currentAdditional : post.additional,
-    currentFurther : post.further,
-    currentDate_start : post.date_start,
-    currentDate_end : post.date_end,
-    currentIn_process : post.in_process,
-    currentComplete : post.complete,
-    currentPersonal : post.personal,
-    currentRole : post.role,
-    currentSkills: post.skills,
-    currentDeliverable : post.poc_type,
-    currentLink : post.link,
-  })
-};
-
-toggle() {
+  toggle() {
     this.setState({addClass: !this.state.addClass});
   }
 
@@ -71,11 +70,10 @@ toggle() {
       }
     }
 
-    const postsobjects = this.state.posts.map((post) => 
-      <li key={post.id} align="start" className="project-item"
-      onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
-        <div data-aos="fade-left" data-aos-delay={aosDelay + post.id*50} className="project-title">{post.id}⋅⋅{post.title}</div>
-        <span data-aos="fade-left" data-aos-delay={aosDelay + post.id*50}>{post.span}</span>
+    let postsobjects = this.state.posts.map((post) => 
+      <li key={post.id} align="start" className="project-item" onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
+        <div data-aos="fade-left" data-aos-delay={aosDelay + post.id*50} className="project-title"  >{post.id}⋅⋅{post.title}</div>
+        <span data-aos="fade-left" data-aos-delay={aosDelay + post.id*50}>{post.span}</span> 
       </li>
     );
 
@@ -104,16 +102,24 @@ toggle() {
               {out.currentSkills}
               {out.currentDeliverable}
               {out.currentLink}
+
+              
+              {/* <div className="prev-next">
+                <div className="button-prev" >prev</div>
+                ⋅⋅
+                <div  className="button-next" >next</div>
+              </div> */}
+                  
+              
             </div>
               
-            <div className="prev-next">
-              <div className="button-prev" >prev</div>
-              <div className="button-next" >next</div>
-            </div>
+
           </div>
           <div className="close-button" onClick={this.toggle.bind(this)}>close</div>
+
         </div> 
-        <div className={homeClass.join(' ')} >{postsobjects}</div>
+        <div className={homeClass.join(' ')} >{postsobjects}           
+        </div>
       </div>
     );
   }

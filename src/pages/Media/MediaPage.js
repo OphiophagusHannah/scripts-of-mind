@@ -29,7 +29,7 @@ const MediaPage = () => (
     <div>Linkedin</div>
     <div>Github</div>
 
-    <NavLink className="jump-next next-blog" to="/drawings">
+    <NavLink className="jump-next c" to="/drawings">
       part of me
     </NavLink>
   </Fragment>

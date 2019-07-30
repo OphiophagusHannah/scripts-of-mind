@@ -4,9 +4,11 @@ import GetLocalArts from '../../components/LocalArts/GetLocalArts';
 
 const DrawingsPage = () => (
   <Fragment>
-    <h1>Open this Pandora</h1>
+    
+
+
     <GetLocalArts/>
-    <NavLink className="jump-next" to="/contact">
+    <NavLink className="jump-next next-blog" to="/contact">
       speak to me
     </NavLink>
   </Fragment>

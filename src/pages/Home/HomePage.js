@@ -6,7 +6,7 @@ const HomePage = () => (
   <Fragment>
     <GetLocalProjects/>
     <div className="bottom-padding">
-    <NavLink className="jump-next"  to="/about">
+    <NavLink className="jump-next next-blog"  to="/about">
       thought of mine
     </NavLink>
     </div>
