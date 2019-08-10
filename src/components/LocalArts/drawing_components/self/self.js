@@ -117,12 +117,12 @@ const posts = [
     {
         "id" : 24,
         "class" : "box x",
-        "image" : "/nv-images/image_part_024.jpg"
+        "image" : "/nv-images/image_part_025.jpg"
     },
     {
         "id" : 25,
         "class" : "box y",
-        "image" : "/nv-images/image_part_025.jpg"
+        "image" : "/nv-images/image_part_024.jpg"
     }
 ];
 

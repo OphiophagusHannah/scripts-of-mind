@@ -4,8 +4,6 @@ import GetLocalArts from '../../components/LocalArts/GetLocalArts';
 
 const DrawingsPage = () => (
   <Fragment>
-    
-
 
     <GetLocalArts/>
     <NavLink className="jump-next next-blog" to="/contact">

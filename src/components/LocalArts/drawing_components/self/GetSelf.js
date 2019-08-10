@@ -15,12 +15,13 @@ class GetSelf extends Component {
 
   render() {
       const {posts} = this.state;
+      let aosDelay = 50;
       return(
           <div className="nv-wrapper">
               
               {
                   posts.map(post => (
-                      <div key={post.id} className={post.class} align="start">
+                      <div data-aos="fade-left" data-aos-delay={aosDelay + post.id*50} key={post.id} className={post.class} align="start">
                         <img alt="some" className="inverse" src={post.image}/>
                         <img alt="some" className="shade" src={post.image}/>
                         <img alt="some" className="img" src={post.image}/>

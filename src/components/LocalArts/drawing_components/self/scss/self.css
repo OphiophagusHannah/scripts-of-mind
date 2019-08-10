@@ -5,7 +5,6 @@ body {
 .nv-wrapper {
   display: -ms-grid;
   display: grid;
-  z: 100%;
   -ms-grid-columns: (1fr)[25];
       grid-template-columns: repeat(25, 1fr);
   -ms-grid-rows: 1fr;

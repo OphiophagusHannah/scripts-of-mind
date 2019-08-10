@@ -158,11 +158,8 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/blog">
               words on mind
             </NavLink>
-            <NavLink activeClassName="active" to="/media">
-              more of mine
-            </NavLink>
             <NavLink activeClassName="active" to="/drawings">
-              part of me
+              more of mine
             </NavLink>
             <NavLink activeClassName="active" to="/contact">
               speak to me

@@ -72,7 +72,7 @@ class GetLocalProjects extends Component {
 
     let postsobjects = this.state.posts.map((post) => 
       <li key={post.id} align="start" className="project-item" onMouseEnter={() => this.fetchData(post)} onClick={this.toggle.bind(this)}>
-        <div data-aos="fade-left" data-aos-delay={aosDelay + post.id*50} className="project-title"  >{post.id}⋅⋅{post.title}</div>
+        <div data-aos="fade-left" data-aos-delay={aosDelay + post.id*50} className="project-title-home"  >{post.id}⋅⋅{post.title}</div>
         <span data-aos="fade-left" data-aos-delay={aosDelay + post.id*50}>{post.span}</span> 
       </li>
     );

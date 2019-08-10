@@ -118,6 +118,9 @@ class NavArts extends Component {
             <NavLink activeClassName="active" to="/drawings">
               nv
             </NavLink>
+            <NavLink activeClassName="active" to="/drawings">
+              balance
+            </NavLink>
 
           </ul>
 

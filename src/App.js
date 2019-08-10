@@ -15,6 +15,10 @@ import Media from "./pages/Media/MediaPage";
 import DrawingsPage from "./pages/Drawings/DrawingsPage";
 import Blog from "./pages/Blog/BlogPage";
 
+const ScrollToTop = () => {
+  window.scrollTo(0, 0);
+  return null;
+}
 
 class App extends Component {
   constructor(props){
@@ -25,17 +29,17 @@ class App extends Component {
   componentWillReceiveProps (){ 
     AOS.refresh(); 
   } 
-  
+
   render() {
     return (
       <div>
         <Nav />
-          <Route exaxt={true} path="/about" component={About} />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/media" component={Media} />
-          <Route exaxt path="/blog" component={Blog} />
-          <Route exact path="/drawings" component={DrawingsPage} />
+          <Route onUpdate={ScrollToTop} exaxt={true} path="/about" component={About} />
+          <Route onUpdate={ScrollToTop} exact path="/" component={Home} />
+          <Route onUpdate={ScrollToTop} exact path="/contact" component={Contact} />
+          <Route onUpdate={ScrollToTop} exact path="/media" component={Media} />
+          <Route onUpdate={ScrollToTop} exaxt path="/blog" component={Blog} />
+          <Route onUpdate={ScrollToTop} exact path="/drawings" component={DrawingsPage} />
       </div>
     );
   }

@@ -5,6 +5,7 @@ body {
 .wrapper {
   display: -ms-grid;
   display: grid;
+  height: 90vh;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (1fr)[3];
