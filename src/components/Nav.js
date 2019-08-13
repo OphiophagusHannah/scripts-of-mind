@@ -161,9 +161,9 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/drawings">
               more of mine
             </NavLink>
-            <NavLink activeClassName="active" to="/contact">
+            {/* <NavLink activeClassName="active" to="/contact">
               speak to me
-            </NavLink>
+            </NavLink> */}
           </ul>
         </nav>
       </Navigation>

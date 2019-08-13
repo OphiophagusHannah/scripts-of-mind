@@ -22,7 +22,7 @@ class GetLocalArts extends Component {
             <Tab data-aos="fade-left" data-aos-delay="200">interferance</Tab>
             <Tab data-aos="fade-left" data-aos-delay="200">balance</Tab>
           </TabList>
-          <div class="tab-panel">
+          <div className="tab-panel">
             <TabPanel>
               <h1>
                 <span data-aos="fade-left" data-aos-delay="200">Explore⋅⋅</span>

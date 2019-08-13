@@ -15,6 +15,7 @@ class GetLocalProjects extends Component {
 
   fetchData = (post) => {
     this.setState({
+      currentLink : post.link,
       currentBody: post.image, 
       currentContent: post.content,
       currentTitle : post.title,
@@ -35,7 +36,7 @@ class GetLocalProjects extends Component {
       currentRole : post.role,
       currentSkills: post.skills,
       currentDeliverable : post.poc_type,
-      currentLink : post.link,
+      
     })
   };
 

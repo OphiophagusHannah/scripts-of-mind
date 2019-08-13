@@ -145,7 +145,8 @@ $breakpoints: (
 }
 
 .sources-list {
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   display: flex;
 }
 
@@ -176,7 +177,7 @@ $breakpoints: (
 }
 
 .project-title-home {
-  padding-left: 5rem;
+  padding-left: 3rem;
   font-size: 16pt;
   color: grey;
   font-weight: 700;
@@ -189,7 +190,6 @@ $breakpoints: (
 
   @include respond-to('small') {
     font-size: 48pt;
-    
   }
 }
 

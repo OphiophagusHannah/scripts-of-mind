@@ -5,7 +5,6 @@ body {
 .balance-wrapper {
   display: -ms-grid;
   display: grid;
-  height: 90vh;
   -ms-grid-rows: (1fr)[25];
       grid-template-rows: repeat(25, 1fr);
   -ms-grid-columns: 1fr;
@@ -289,26 +288,26 @@ body {
   opacity: .8;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  -webkit-filter: saturate(9) brightness(2);
-          filter: saturate(9) brightness(2);
+  -webkit-filter: saturate(9) brightness(2) hue-rotate(-120deg);
+          filter: saturate(9) brightness(2) hue-rotate(-120deg);
   -ms-filter: "FlipH";
   -webkit-transition: .5s ease;
   transition: .5s ease;
 }
 
 .balance-wrapper .box:hover .img-stable {
-  -webkit-filter: saturate(9) brightness(2) saturate(3);
-          filter: saturate(9) brightness(2) saturate(3);
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-filter: saturate(9) brightness(2) saturate(3) hue-rotate(-150deg);
+          filter: saturate(9) brightness(2) saturate(3) hue-rotate(-150deg);
+  -webkit-transition: 3s ease;
+  transition: 3s ease;
 }
 
 .balance-wrapper .box:hover .shade {
   width: 100%;
   height: 90%;
   opacity: .6;
-  -webkit-filter: hue-rotate(-20deg) saturate(8);
-          filter: hue-rotate(-20deg) saturate(8);
+  -webkit-filter: hue-rotate(-70deg) saturate(8);
+          filter: hue-rotate(-70deg) saturate(8);
   -webkit-transform: translate3d(12px, -22px, -35px);
           transform: translate3d(12px, -22px, -35px);
   -webkit-transition: .7s ease;

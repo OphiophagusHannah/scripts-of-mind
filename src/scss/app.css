@@ -135,7 +135,8 @@ h1, h2, h3, h4 {
 }
 
 .sources-list {
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,7 +168,7 @@ h1, h2, h3, h4 {
 }
 
 .project-title-home {
-  padding-left: 5rem;
+  padding-left: 3rem;
   font-size: 16pt;
   color: grey;
   font-weight: 700;
