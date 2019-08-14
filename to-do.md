@@ -2,8 +2,8 @@
 
 ## Functionality
 * Prev Next Project/Post
-* Home Page
-* Scroll To the top
+* ~~Home Page~~
+* ~~Scroll To the top~~
 * Append list to Posts
 * Append Lists to projects
 
