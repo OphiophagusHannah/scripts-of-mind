@@ -1,7 +1,7 @@
 # To Do List
 
 ## Functionality
-* Prev Next Project/Post
+* Prev Next Project/Post (!)
 * ~~Home Page~~
 * ~~Scroll To the top~~
 * Append list to Posts
