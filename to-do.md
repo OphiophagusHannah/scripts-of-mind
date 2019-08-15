@@ -4,8 +4,8 @@
 * Prev Next Project/Post (!)
 * ~~Home Page~~
 * ~~Scroll To the top~~
-* Append list to Posts
-* Append Lists to projects
+* ~~Append list to Posts~~
+* ~~Append Lists to projects~~
 
 ## Style
 * Each Page Unique Purpose
