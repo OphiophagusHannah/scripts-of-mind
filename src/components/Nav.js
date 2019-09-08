@@ -9,20 +9,7 @@ const Navigation = styled.header`
     color: #222;
     font-size: 2rem;
   }
-  nav {
-    ul {
-      display: flex;
-    }
-
-    a:hover {
-      color: salmon;
-    }
-
-    a.active {
-      color: #222;
-      text-decoration: underline;
-    }
-  }
+ 
 
   @media only screen and (max-width: 800px) {
     padding: 0px;
@@ -150,7 +137,10 @@ class Nav extends Component {
           <i className="fa fa-bars" aria-hidden="true" onClick={e => this.handleToggle(e)}/>
           <ul onClick={e => this.handleToggle(e)} className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
             <NavLink activeClassName="active" to="/">
-              ophiophagus_hannah :: scripts of mind
+              ophiophagus_hannah
+            </NavLink>
+            <NavLink activeClassName="active" to="/projects">
+              scripts of mind
             </NavLink>
             <NavLink activeClassName="active" to="/about">
               thought of mine

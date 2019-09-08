@@ -1,14 +1,15 @@
 import React, { Fragment } from "react";
-import GetLocalProjects from '../../components/LocalProjects/GetLocalProjects';
+
 import { NavLink } from "react-router-dom";
 
 const HomePage = () => (
   <Fragment>
-    <GetLocalProjects/>
     <div className="bottom-padding">
-    <NavLink className="jump-next next-blog"  to="/about">
-      thought of mine
-    </NavLink>
+      <h1 className="project-title">
+                <span data-aos="fade-left" data-aos-delay="200">Holder⋅⋅</span>
+                <span data-aos="fade-left" data-aos-delay="250">of the⋅⋅</span>  
+                <span data-aos="fade-left" data-aos-delay="300">Place⋅⋅</span>
+      </h1>
     </div>
   </Fragment>
 );

@@ -1,14 +1,13 @@
 import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
-import GetLocalArts from '../../components/LocalArts/GetLocalArts';
+import GetLocalArts from "../../components/LocalArts/GetLocalArts";
 
 const DrawingsPage = () => (
   <Fragment>
-
-    <GetLocalArts/>
-    <NavLink className="jump-next next-blog" to="/contact">
+    <GetLocalArts />
+    {/* <NavLink className="jump-next next-blog" to="/contact">
       speak to me
-    </NavLink>
+    </NavLink> */}
   </Fragment>
 );
 

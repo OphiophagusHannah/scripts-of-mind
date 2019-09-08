@@ -1,0 +1,27 @@
+.body {
+    font-size: 16pt;
+    color: darkgrey;
+  }
+  
+.bottom-padding {
+height: 20rem;
+display: flex;
+align-items: flex-end;
+}
+
+*::-webkit-scrollbar { width: 0 !important }
+
+* { overflow: -moz-scrollbars-none; }
+
+* { -ms-overflow-style: none; }
+
+.jump-next {
+color: grey;
+padding: 2rem;
+height: 4rem;
+font-weight: 700;
+text-decoration: none;
+&:hover {
+    text-decoration: underline;
+}
+}

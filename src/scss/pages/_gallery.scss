@@ -1,0 +1,148 @@
+//GalleryPage
+
+.react-tabs {
+  display: flex;
+  padding-top: 5rem;
+
+  ul {
+    display: block;
+    max-width: 10rem;
+    li {
+      list-style-type: none;
+      color: grey;
+      font-size: 18px;
+      width: auto;
+      display: inline-block;
+      font-family: $font-bold;
+
+      text-decoration: none;
+      padding: 0.5rem;
+
+      &:focus {
+        //text-decoration: underline;
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+        color: black;
+      }
+    }
+
+    .react-tabs__tab--selected {
+      color: grey;
+      //font-weight: 700;
+      &:after {
+        display: block;
+        content: "";
+        height: 1px;
+        width: calc(100% + 0.4rem);
+        position: relative;
+        background: grey;
+        opacity: 0.6;
+        top: -0.65rem;
+        left: -0.2rem;
+      }
+    }
+  }
+}
+
+.tab-panel {
+  padding: 0 5rem;
+
+  h1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: lightgrey;
+    font-size: 6rem;
+    margin: auto;
+    margin-top: 0;
+  }
+}
+
+.about-box {
+  //border-left: 5px solid purple;
+  padding: 2rem 5rem;
+  padding-bottom: 20rem;
+}
+
+.galimage {
+  width: 15rem;
+  height: auto;
+}
+
+.art-list.closed {
+  opacity: 0.6;
+  display: none;
+}
+
+.art-box {
+  padding-top: 0;
+  opacity: 1;
+  color: black;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: 0.4s ease;
+
+  .close-button {
+    display: none;
+  }
+
+  .post-content {
+    display: none;
+  }
+
+  &.open {
+    opacity: 1;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    transition: 0.4s ease;
+
+    .prev-next {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      bottom: 5rem;
+      right: 3rem;
+    }
+
+    .button-next,
+    .button-prev {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 14px;
+      margin-left: 1rem;
+    }
+
+    .close-button {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      top: 5rem;
+      right: 3rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      font-size: 14px;
+      line-height: 14px;
+    }
+
+    .post-content {
+      display: block;
+      width: 70%;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+}

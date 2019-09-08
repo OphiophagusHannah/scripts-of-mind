@@ -112,13 +112,13 @@ class NavArts extends Component {
     return (
       <Navigation>
           <ul>
-            <NavLink activeClassName="active" to="/drawings">
+            <NavLink activeClassName="active" to="/interferance">
               interferance
             </NavLink>
-            <NavLink activeClassName="active" to="/drawings">
+            <NavLink activeClassName="active" to="/self">
               nv
             </NavLink>
-            <NavLink activeClassName="active" to="/drawings">
+            <NavLink activeClassName="active" to="/balance">
               balance
             </NavLink>
 
