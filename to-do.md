@@ -9,7 +9,7 @@
 * progress bar (today)
 
 ## Style
-* Reorganize styles (today)
+* ~~Reorganize styles (today)~~
 * Each Page Unique Purpose
 * Mobile Styles
 * Timeline Posts
