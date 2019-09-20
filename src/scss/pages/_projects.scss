@@ -1,7 +1,7 @@
 //ProjectsPage
 .project-title {
   @include font_large_header;
-  height: 85vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -10,7 +10,8 @@
   color: lightgrey;
   margin-top: auto;
   line-height: 6.5rem;
-  width: 50%;
+  margin-bottom: 3rem;
+  width: 60%;
   margin-left: 0;
 
   &.title-blog {
@@ -27,6 +28,13 @@
   padding-left: 1rem;
   @include font_header;
   padding-top: 1rem;
+  text-decoration: none;
+
+  a {
+    color: darkgrey;
+    text-decoration: none;
+    transition: 0.7s ease;
+  }
 
   &.title-blog {
     margin-bottom: 0.5rem;
@@ -47,7 +55,7 @@
   display: flex;
   align-items: baseline;
   flex-direction: column;
-  text-decoration: none;
+
   @include respond-to("small") {
     flex-direction: row;
   }
@@ -55,8 +63,7 @@
   @include font_header;
   background: white;
   cursor: pointer;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  transition: 0.7s ease;
+  text-decoration: none;
 
   span {
     padding-left: 1rem;
@@ -66,12 +73,16 @@
       font-size: 12pt;
     }
   }
+  .project-title-home,
+  .project-title {
+    transition: 2s linear;
+  }
 
   &:hover {
     color: white;
     background: none;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
-    transition: 0.7s ease;
+    transition: 0.3s linear;
 
     .project-title {
       color: white;
@@ -79,6 +90,11 @@
 
     .project-title-home {
       color: white;
+
+      a {
+        color: white;
+        text-decoration: linear;
+      }
       //text-decoration: line-through;
     }
 
@@ -86,12 +102,21 @@
       color: white;
     }
   }
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  transition: 0.3s linear;
 }
 
 .home-parent {
   margin-top: 30px;
   padding-top: 7px;
   background-image: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
+
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   li {
     //border-bottom: 1px solid darkgrey;
@@ -119,6 +144,10 @@
     display: none;
   }
 
+  &.closed {
+    display: none;
+  }
+
   .main-image {
     display: flex;
   }
@@ -133,6 +162,11 @@
     //padding-top: 15%;
     //overflow-y: scroll;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding-bottom: 20rem;
     transition: 0.4s ease;
 
     .prev-next {
@@ -167,7 +201,7 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      top: 5rem;
+      top: 3rem;
       right: 3rem;
       width: 3.5rem;
       height: 3.5rem;
@@ -244,10 +278,38 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      p {
+      .p {
         background-clip: none;
         -webkit-text-fill-color: grey !important;
       }
+
+      .span {
+        background-clip: none !important;
+        font-size: 26px !important;
+        -webkit-text-fill-color: black !important;
+        //font-weight: 800;
+        @include font_header;
+        //font-weight: 800;
+        margin-bottom: 6rem;
+      }
     }
   }
+}
+
+.scrollbar.ui-progressbar .ui-progressbar-value {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  padding: 0px;
+  margin: 0px;
+  z-index: 66;
+  background-color: #f4f6f9;
+  background-image: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%) !important;
+  color: #666666;
+  // #hoge {
+  //   background: white;
+  //   opacity: 0.8;
+  // }
 }

@@ -5,8 +5,10 @@ body {
 .balance-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[25];
-      grid-template-rows: repeat(25, 1fr);
+  height: 80%;
+  width: auto;
+  -ms-grid-rows: (3.6%)[25];
+      grid-template-rows: repeat(25, 3.6%);
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -243,6 +245,7 @@ body {
 
 .balance-wrapper .box .img {
   position: relative;
+  top: 0;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -253,6 +256,7 @@ body {
 
 .balance-wrapper .box .img-stable {
   position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -265,18 +269,20 @@ body {
   position: absolute;
   width: 100%;
   left: 0;
-  height: auto;
+  height: 100%;
+  top: 0;
   bottom: 0;
-  -webkit-transition: 2s ease;
-  transition: 2s ease;
+  -webkit-transition: 4s ease;
+  transition: 4s ease;
 }
 
 .balance-wrapper .box .inverse {
   position: absolute;
   width: 100%;
   left: 0;
+  top: 0;
   bottom: 0;
-  height: auto;
+  height: 100%;
   -webkit-transition: 4s ease;
   transition: 4s ease;
 }
@@ -285,13 +291,11 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  opacity: .8;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  opacity: 0.8;
   -webkit-filter: saturate(9) brightness(2) hue-rotate(-120deg);
           filter: saturate(9) brightness(2) hue-rotate(-120deg);
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .balance-wrapper .box:hover .img-stable {
@@ -302,26 +306,22 @@ body {
 }
 
 .balance-wrapper .box:hover .shade {
-  width: 100%;
-  height: 90%;
-  opacity: .6;
+  width: calc(100% - 12rem);
+  opacity: 0.4;
   -webkit-filter: hue-rotate(-70deg) saturate(8);
           filter: hue-rotate(-70deg) saturate(8);
-  -webkit-transform: translateX(-12rem);
-          transform: translateX(-12rem);
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 
 .balance-wrapper .box:hover .inverse {
-  width: 100%;
-  height: 70%;
-  opacity: .5;
+  width: calc(100% - 12rem);
+  opacity: 0.5;
+  right: 0;
+  left: 12rem;
   -webkit-filter: hue-rotate(100deg) saturate(8);
           filter: hue-rotate(100deg) saturate(8);
-  -webkit-transform: translateX(17rem);
-          transform: translateX(17rem);
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 /*# sourceMappingURL=balance-image.css.map */

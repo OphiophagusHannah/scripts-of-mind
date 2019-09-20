@@ -3,21 +3,18 @@ body {
 }
 
 .balance-wrapper {
-    display: grid;
-    // height: 90vh;
-    //width: 80%;
-    // height: auto;
-    // width: auto;
+  display: grid;
+  //width: 80%;
+  height: 80%;
+  width: auto;
 
-    grid-template-rows: repeat(25, 1fr);
-    grid-template-columns: 1fr ;
-   
+  grid-template-rows: repeat(25, 3.6%);
+  grid-template-columns: 1fr;
 
-
-    .box {
-        position: relative;
-        bottom: 0;
-    }
+  .box {
+    position: relative;
+    bottom: 0;
+  }
 
   .a {
     grid-row: 1 / 2;
@@ -45,7 +42,6 @@ body {
     grid-column: 1 / 2;
   }
 
-  
   .g {
     grid-row: 7 / 8;
     grid-column: 1 / 2;
@@ -125,58 +121,60 @@ body {
     grid-column: 1 / 2;
   }
 
-
   .box .img {
     position: relative;
-   
+    top: 0;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
+
     transition: 5s ease;
   }
 
   .box .img-stable {
     position: absolute;
-   
+
+    top: 0;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
+
     transition: 5s ease;
   }
 
   .box .shade {
     position: absolute;
     width: 100%;
- 
+
     left: 0;
-    height: auto;
+    height: 100%;
+    top: 0;
     bottom: 0;
-    transition: 2s ease;
+    transition: 4s ease;
   }
 
   .box .inverse {
     position: absolute;
     width: 100%;
-    
+
     left: 0;
+    top: 0;
     bottom: 0;
-    height: auto;
+    height: 100%;
     transition: 4s ease;
   }
 
   .box:hover .img {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      opacity: .8;
-      transform: scaleX(-1);
-      filter: saturate(9) brightness(2) hue-rotate(-120deg);
-      //-ms-filter: "FlipH";
-      transition: .5s ease;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    //transform: scaleX(-1);
+    filter: saturate(9) brightness(2) hue-rotate(-120deg);
+    //-ms-filter: "FlipH";
+    transition: 0.5s ease;
   }
 
   .box:hover .img-stable {
@@ -185,23 +183,25 @@ body {
   }
 
   .box:hover .shade {
-    
-    width: 100%;
-    height: 90%;
-    opacity: .6;
+    width: calc(100% - 12rem);
+    //height: 90%;
+
+    opacity: 0.4;
     filter: hue-rotate(-70deg) saturate(8);
-    transform: translateX( -12rem);
-    transition: .7s ease;
+    //transform: translateX(-12rem);
+    transition: 0.7s ease;
   }
   .box:hover .inverse {
     // margin-top: 15%;
     // margin-bottom: 15%;
 
-    width: 100%;
-    height: 70%;
-    opacity: .5;
+    width: calc(100% - 12rem);
+    //height: 70%;
+    opacity: 0.5;
+    right: 0;
+    left: 12rem;
     filter: hue-rotate(100deg) saturate(8);
-    transform: translateX(17rem);
-    transition: .7s ease;
+    //transform: translateX(17rem);
+    transition: 0.7s ease;
   }
 }

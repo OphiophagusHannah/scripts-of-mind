@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import posts from "./posts.js";
+import ReactHtmlParser from "react-html-parser";
+import ProgressBar from "react-scroll-progress-bar";
 
 class GetLocalPosts extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       posts: posts.reverse(),
-      addClass: false,
-      hover: false
+      isShow: true
     };
   }
+
+  toggleShow = e => {
+    e.preventDefault();
+    this.setState(state => ({ isShow: !state.isShow }));
+    window.scrollTo(0, 0);
+  };
 
   fetchData = post => {
     this.setState({
@@ -21,32 +29,54 @@ class GetLocalPosts extends Component {
     });
   };
 
-  toggle() {
-    this.setState({ addClass: !this.state.addClass });
-  }
-
   render() {
     let aosDelay = 50;
 
-    let boxClass = ["blog-box"];
-    if (this.state.addClass) {
-      boxClass.push("open");
+    let { width, height } = this.props;
+
+    let out = {};
+    for (let key in this.state) {
+      if (!this.state.hasOwnProperty(key)) {
+        continue;
+      }
+
+      let render_key = key.replace("current", "__");
+      let lowkey = render_key.toLocaleLowerCase();
+
+      if (this.state[key]) {
+        out[key] = (
+          <div className={lowkey}>
+            <h3 className="bold">{lowkey}</h3>
+            <div className="p">{ReactHtmlParser(this.state[key])}</div>
+          </div>
+        );
+      }
     }
 
-    let homeClass = ["blog-list"];
-    if (this.state.addClass) {
-      homeClass.push("closed");
-    }
+    let greeting = (
+      <div className="fetching-box open" id="fetching-box">
+        <ProgressBar />
+        <div className="close-button" onClick={this.toggleShow}></div>
+        <div className="post-content" id="post-content" data-aos="fade-down">
+          <div className="project-content">
+            <div className="project-content-inner">
+              <h2 className="project-title">{this.state.currentTitle}</h2>
+              <p class="p">{this.state.currentDate}</p>
+              <p class="p">{this.state.currentContent}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
 
-    const postsobjects = this.state.posts.map(post => (
+    let postsobjects = this.state.posts.map((post, index) => (
       <div
-        data-aos="fade-left"
-        data-aos-delay={aosDelay + post.id * 50}
         key={post.id}
         align="start"
         className="blog-item"
         onMouseEnter={() => this.fetchData(post)}
-        onClick={this.toggle.bind(this)}
+        onClick={this.toggleShow}
+        to={`/${post.title}`}
       >
         <h2 className="title-blog">{post.title}</h2>
         <span className="bold">{post.date}</span>
@@ -55,25 +85,17 @@ class GetLocalPosts extends Component {
     ));
 
     return (
-      <div className="blog-parent">
-        <div className={boxClass.join(" ")}>
-          <div className="post-content">
-            <h2 className="title">{this.state.currentTitle}</h2>
-            <p>{this.state.currentDate}</p>
-            <p>{this.state.currentContent}</p>
-            <div className="prev-next">
-              <div className="button-prev">prev</div>
-              <div className="button-next">next</div>
-            </div>
-          </div>
-          <div className="close-button" onClick={this.toggle.bind(this)}>
-            close
-          </div>
-        </div>
-        <div className={homeClass.join(" ")}>{postsobjects}</div>
+      <div className="blog-parent" id="blog-parent">
+        <Greeting greeting={greeting} isShow={!this.state.isShow} />
+        <PostsObjects postsobjects={postsobjects} isShow={this.state.isShow} />
       </div>
     );
   }
 }
+
+let PostsObjects = ({ postsobjects, isShow }) =>
+  isShow ? <div>{postsobjects}</div> : null;
+
+const Greeting = ({ greeting, isShow }) => (isShow ? greeting : null);
 
 export default GetLocalPosts;

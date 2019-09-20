@@ -6,14 +6,20 @@
   right: 1rem;
 }
 
+.blog-parent {
+  margin-top: 30px;
+  padding-top: 7px;
+}
+
 .blog-box {
+  overflow-y: none;
   padding-top: 0;
   opacity: 1;
-  color: #222;
+  color: black;
   top: 0;
-  left: 0;
-  margin-left: 30%;
+  right: 0;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+
   transition: 0.4s ease;
 
   .close-button {
@@ -25,9 +31,14 @@
   }
 
   &.open {
+    overflow-y: none;
+    padding-top: 0;
     opacity: 1;
-    margin-left: 0;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    color: black;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
+
     transition: 0.4s ease;
 
     .prev-next {
@@ -58,13 +69,62 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      top: 5rem;
+      top: 3rem;
       right: 3rem;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      font-size: 14px;
+      width: 3.5rem;
+      height: 3.5rem;
+      //color: white;
+      //border-radius: 50%;
+      color: white;
+      content: "";
+      font-weight: 700;
+      font-size: 15px;
       line-height: 14px;
+      font-family: $font_bold;
+      background: linear-gradient(340deg, white 0%, white 100%);
+      transition: 0.3s ease;
+
+      &:before {
+        display: block;
+        content: "";
+        opacity: 0.6;
+        height: 1px;
+        background: grey;
+        width: 3rem;
+        position: fixed;
+        transform: translate(0px, 0px) rotate(-45deg);
+        transition: 0.3s ease;
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        opacity: 0.6;
+        height: 1px;
+        background: grey;
+        width: 3rem;
+        position: fixed;
+        transform: translate(0px, 0px) rotate(45deg);
+        transition: 0.3s ease;
+      }
+
+      &:hover {
+        background: linear-gradient(340deg, #ff4500 0%, #cc4499 100%);
+        transition: 0.3s ease;
+        &:after {
+          background: white;
+          opacity: 0.9;
+          height: 2px;
+          transition: 0.3s ease;
+        }
+
+        &:before {
+          background: white;
+          opacity: 0.9;
+          height: 2px;
+          transition: 0.3s ease;
+        }
+      }
     }
 
     .post-content {
@@ -72,6 +132,22 @@
       width: 70%;
       font-size: 22px;
       line-height: 32px;
+      background: linear-gradient(340deg, white 0%, white 100%);
+    }
+
+    .blog-content-inner {
+      background: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      h2 {
+        background-clip: text;
+      }
+
+      .p {
+        background-clip: none;
+        -webkit-text-fill-color: grey !important;
+      }
     }
   }
 }

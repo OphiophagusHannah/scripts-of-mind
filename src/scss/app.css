@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Domine|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Montserrat&display=swap");
 body {
-  font-family: "Domine";
+  font-family: "Istok Web";
 }
 
 h1,
@@ -53,7 +53,7 @@ h4 {
   font-family: "Montserrat";
   color: lightgrey;
   font-size: 6rem;
-  height: 85vh;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,7 +71,8 @@ h4 {
   color: lightgrey;
   margin-top: auto;
   line-height: 6.5rem;
-  width: 50%;
+  margin-bottom: 3rem;
+  width: 60%;
   margin-left: 0;
 }
 
@@ -92,6 +93,14 @@ h4 {
   font-size: 16pt;
   color: grey;
   padding-top: 1rem;
+  text-decoration: none;
+}
+
+.project-title-home a {
+  color: darkgrey;
+  text-decoration: none;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 
 .project-title-home.title-blog {
@@ -121,16 +130,16 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-decoration: none;
   font-family: "Montserrat";
   font-size: 16pt;
   color: grey;
   background: white;
   cursor: pointer;
+  text-decoration: none;
   background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
   background-image: linear-gradient(to right, white 0%, white 100%);
-  -webkit-transition: 0.7s ease;
-  transition: 0.7s ease;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 @media (min-width: 767px) {
@@ -154,13 +163,19 @@ h4 {
   }
 }
 
+.project-item .project-title-home,
+.project-item .project-title {
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+}
+
 .project-item:hover {
   color: white;
   background: none;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
-  -webkit-transition: 0.7s ease;
-  transition: 0.7s ease;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .project-item:hover .project-title {
@@ -171,6 +186,12 @@ h4 {
   color: white;
 }
 
+.project-item:hover .project-title-home a {
+  color: white;
+  -webkit-text-decoration: linear;
+          text-decoration: linear;
+}
+
 .project-item:hover span {
   color: white;
 }
@@ -179,6 +200,14 @@ h4 {
   margin-top: 30px;
   padding-top: 7px;
   background-image: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
+}
+
+.home-parent a {
+  text-decoration: none;
+}
+
+.home-parent a:hover {
+  text-decoration: none;
 }
 
 .home-parent li {
@@ -207,6 +236,10 @@ h4 {
   display: none;
 }
 
+.fetching-box.closed {
+  display: none;
+}
+
 .fetching-box .main-image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,6 +254,11 @@ h4 {
   opacity: 1;
   background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
   background-image: linear-gradient(to right, white 0%, white 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding-bottom: 20rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
@@ -273,7 +311,7 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  top: 5rem;
+  top: 3rem;
   right: 3rem;
   width: 3.5rem;
   height: 3.5rem;
@@ -360,9 +398,33 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
-.fetching-box.open .project-content-inner p {
+.fetching-box.open .project-content-inner .p {
   background-clip: none;
   -webkit-text-fill-color: grey !important;
+}
+
+.fetching-box.open .project-content-inner .span {
+  background-clip: none !important;
+  font-size: 26px !important;
+  -webkit-text-fill-color: black !important;
+  font-family: "Montserrat";
+  font-size: 16pt;
+  color: grey;
+  margin-bottom: 6rem;
+}
+
+.scrollbar.ui-progressbar .ui-progressbar-value {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  padding: 0px;
+  margin: 0px;
+  z-index: 66;
+  background-color: #f4f6f9;
+  background-image: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%) !important;
+  color: #666666;
 }
 
 .header {
@@ -413,12 +475,7 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   font-weight: 700;
-}
-
-.top a:before {
-  content: "::";
-  padding: 0 0.5rem;
-  text-decoration: none !important;
+  padding: 0 1rem;
 }
 
 .top a:hover {
@@ -429,18 +486,6 @@ h4 {
 .top a:hover:before {
   text-decoration: none;
   opacity: 1 !important;
-}
-
-.top a:hover:after {
-  display: block;
-  content: "";
-  height: 2px;
-  width: 100%;
-  position: relative;
-  background: white;
-  opacity: 0.6;
-  top: -0.65rem;
-  left: 0.8rem;
 }
 
 .top a.active {
@@ -455,13 +500,13 @@ h4 {
 .top a.active:after {
   display: block;
   content: "";
-  height: 2px;
-  width: 100%;
+  height: 1px;
+  width: calc(100% + 2rem);
   opacity: 0.8;
   position: relative;
   background: white;
   top: -0.65rem;
-  left: 0.8rem;
+  left: -1rem;
 }
 
 .top a:first-child {
@@ -563,19 +608,29 @@ h4 {
   margin-right: 1rem;
 }
 
+#about-scrollbar {
+  top: unset !important;
+  bottom: 0px !important;
+}
+
 .next-blog {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
 }
 
+.blog-parent {
+  margin-top: 30px;
+  padding-top: 7px;
+}
+
 .blog-box {
+  overflow-y: none;
   padding-top: 0;
   opacity: 1;
-  color: #222;
+  color: black;
   top: 0;
-  left: 0;
-  margin-left: 30%;
+  right: 0;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   -webkit-transition: 0.4s ease;
@@ -591,10 +646,14 @@ h4 {
 }
 
 .blog-box.open {
+  overflow-y: none;
+  padding-top: 0;
   opacity: 1;
-  margin-left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white));
-  background-image: linear-gradient(to right, white 0%, white 100%);
+  color: black;
+  top: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
@@ -645,13 +704,69 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  top: 5rem;
+  top: 3rem;
   right: 3rem;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  font-size: 14px;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: white;
+  content: "";
+  font-weight: 700;
+  font-size: 15px;
   line-height: 14px;
+  font-family: "Montserrat";
+  background: linear-gradient(340deg, white 0%, white 100%);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.blog-box.open .close-button:before {
+  display: block;
+  content: "";
+  opacity: 0.6;
+  height: 1px;
+  background: grey;
+  width: 3rem;
+  position: fixed;
+  -webkit-transform: translate(0px, 0px) rotate(-45deg);
+          transform: translate(0px, 0px) rotate(-45deg);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.blog-box.open .close-button:after {
+  display: block;
+  content: "";
+  opacity: 0.6;
+  height: 1px;
+  background: grey;
+  width: 3rem;
+  position: fixed;
+  -webkit-transform: translate(0px, 0px) rotate(45deg);
+          transform: translate(0px, 0px) rotate(45deg);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.blog-box.open .close-button:hover {
+  background: linear-gradient(340deg, #ff4500 0%, #cc4499 100%);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.blog-box.open .close-button:hover:after {
+  background: white;
+  opacity: 0.9;
+  height: 2px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.blog-box.open .close-button:hover:before {
+  background: white;
+  opacity: 0.9;
+  height: 2px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .blog-box.open .post-content {
@@ -659,6 +774,22 @@ h4 {
   width: 70%;
   font-size: 22px;
   line-height: 32px;
+  background: linear-gradient(340deg, white 0%, white 100%);
+}
+
+.blog-box.open .blog-content-inner {
+  background: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-box.open .blog-content-inner h2 {
+  background-clip: text;
+}
+
+.blog-box.open .blog-content-inner .p {
+  background-clip: none;
+  -webkit-text-fill-color: grey !important;
 }
 
 .blog-list.closed {
@@ -843,11 +974,5 @@ h4 {
   width: 70%;
   font-size: 22px;
   line-height: 32px;
-}
-
-.special-button {
-  display: block;
-  color: black;
-  margin-top: 5rem;
 }
 /*# sourceMappingURL=app.css.map */

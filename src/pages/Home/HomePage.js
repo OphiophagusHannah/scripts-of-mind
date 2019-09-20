@@ -6,9 +6,9 @@ const HomePage = () => (
   <Fragment>
     <div className="bottom-padding">
       <h1 className="project-title">
-                <span data-aos="fade-left" data-aos-delay="200">Holder⋅⋅</span>
-                <span data-aos="fade-left" data-aos-delay="250">of the⋅⋅</span>  
-                <span data-aos="fade-left" data-aos-delay="300">Place⋅⋅</span>
+        <span data-aos="fade-left" data-aos-delay="200">Holder⋅⋅</span>
+        <span data-aos="fade-left" data-aos-delay="250">of the⋅⋅</span>
+        <span data-aos="fade-left" data-aos-delay="300">Place⋅⋅</span>
       </h1>
     </div>
   </Fragment>

@@ -1,18 +1,37 @@
 import React, { Component } from "react";
-import posts from "./projects.js";
+import projects from "./projects.js";
+import PostDetail from './PostDetails';
 import { Link } from "react-router-dom";
 
-// get posts from online api
-// it's return a json file
-
-class GetLocalProjects extends Component {
+class PostList extends Component {
   constructor(props) {
     super(props);
 
+    let selectedPostId = parseInt(props.match.params.id, 10);
+
+    console.log('created new PostList with post id:');
+    console.log(selectedPostId);
+
     this.state = {
-      posts: posts,
-      isShow: true
+      posts: [],
+      selectedPostId: selectedPostId,
+      addClass: false
     };
+
+
+
+    this.fetchAllPosts().then((allPosts) => {
+      this.setState({
+        posts: allPosts,
+        selectedPostId: this.state.selectedPostId
+      });
+
+
+      console.log('state updated. this.state posts is:');
+      console.log(this.state.posts);
+
+
+    });
   }
 
   toggleShow = e => {
@@ -21,120 +40,84 @@ class GetLocalProjects extends Component {
     window.scrollTo(0, 0);
   };
 
-  fetchData = post => {
-    this.setState({
-      currentBody: post.image,
-      currentStatus: post.status,
-      currentContent: post.content,
-      currentTitle: post.title,
-      currentDescription: post.description,
-      currentProblem: post.problem,
-      currentPurpose: post.purpose,
-      currentNote: post.note,
-      currentStructure: post.structure,
-      currentInteraction: post.interaction,
-      currentDiscussion: post.discussion,
-      currentAdditional: post.additional,
-      currentFurther: post.further,
-      currentDate_start: post.date_start,
-      currentDate_end: post.date_end,
-      currentIn_process: post.in_process,
-      currentComplete: post.complete,
-      currentPersonal: post.personal,
-      currentRole: post.role,
-      currentSkills: post.skills,
-      currentDeliverable: post.poc_type,
-      currentLink: post.link
+  fetchAllPosts() {
+    return new Promise((resolve, reject) => {
+      let posts = projects;
+      resolve(posts);
     });
-  };
+  }
+
+  componentWillReceiveProps(newProps) {
+
+    let selectedPostId = parseInt(newProps.match.params.id, 10);
+
+    this.setState((state) => {
+      return { selectedPostId: selectedPostId };
+    });
+  }
+
+  toggle() {
+    this.setState({ addClass: !this.state.addClass });
+  }
 
   render() {
-    let aosDelay = 50;
 
-    let out = {};
-    for (let key in this.state) {
-      if (!this.state.hasOwnProperty(key)) {
-        continue;
-      }
-
-      let render_key = key.replace("current", "__");
-      let lowkey = render_key.toLocaleLowerCase();
-
-      if (this.state[key]) {
-        out[key] = (
-          <div className={lowkey}>
-            <h3 className="bold">{lowkey}</h3>
-            <p>{this.state[key]}</p>
-          </div>
-        );
-      }
+    let boxClass = ["fetching-box"];
+    if (this.state.addClass) {
+      boxClass.push('closed');
     }
 
-    let greeting = (
-      <div className="fetching-box open">
-        <div className="close-button" onClick={this.toggleShow}></div>
-        <div className="post-content" data-aos="fade-down">
-          <h2 className="project-title">{this.state.currentTitle}</h2>
-          <div className="project-content">
-            <div className="project-content-inner">
-              {out.currentDescription}
-              {out.currentProblem}
-              {out.currentPurpose}
-              {out.currentNote}
-              {out.currentStructure}
-              {out.currentInteraction}
-              {out.currentDiscussion}
-              {out.currentAdditional}
-              {out.currentFurther}
-              {out.currentDate_start}
-              {out.currentDate_end}
-              {out.currentIn_process}
-              {out.currentComplete}
-              {out.currentPersonal}
-              {out.currentRole}
-              {out.currentSkills}
-              {out.currentDeliverable}
-              {out.currentLink}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+    let aosDelay = 50;
 
-    let postsobjects = this.state.posts.map((post, index) => (
-      <div
-        key={post.id}
-        align="start"
-        className="project-item"
-        onMouseEnter={() => this.fetchData(post)}
-        onClick={this.toggleShow}
-        to={`/${post.title}`}
-      >
-        <div
-          data-aos="fade-left"
-          data-aos-delay={aosDelay + post.id * 50}
-          className="project-title-home"
-        >
-          {index + 1}⋅⋅{post.title.replace(" ", "_")}
-        </div>
-        <span data-aos="fade-left" data-aos-delay={aosDelay + post.id * 50}>
-          {post.span}
-        </span>
-      </div>
-    ));
+    let loading = (<p>Fetching data from server...</p>);
+    let postDetail = '';
+
+    if (this.state.posts.length) {
+      loading = '';
+
+      let post = this.state.posts.find(post => post.id === this.state.selectedPostId);
+
+      if (post) {
+        postDetail = (<PostDetail post={post} />);
+      }
+
+    }
 
     return (
-      <div className="home-parent">
-        <Greeting greeting={greeting} isShow={!this.state.isShow} />
-        <PostsObjects postsobjects={postsobjects} isShow={this.state.isShow} />
+      <div className="home-parent" id="home-parent" >
+        <div className={boxClass.join(' ')}>
+          {/* {loading} */}
+          {
+            this.state.posts.map(p => (
+
+              <Link to={`/projects/${p.id}`} onClick={this.toggle.bind(this)}>
+                <div key={p.id} align="start"
+                  className="project-item" >
+                  <div
+
+                    data-aos="fade-left"
+                    data-aos-delay={aosDelay + p.id * 50}
+                    className="project-title-home"
+                  >{p.id}⋅⋅{p.title.replace(" ", "_")}              </div>
+                  <span
+                    data-aos="fade-left" data-aos-delay={aosDelay + p.id * 50}
+                  >
+                    {p.span}
+                  </span>
+                </div></Link>
+
+            ))
+          }
+
+        </div>
+        {postDetail}
       </div>
+
     );
   }
 }
 
-let PostsObjects = ({ postsobjects, isShow }) =>
-  isShow ? <div>{postsobjects}</div> : null;
 
-const Greeting = ({ greeting, isShow }) => (isShow ? greeting : null);
 
-export default GetLocalProjects;
+export default PostList;
+
