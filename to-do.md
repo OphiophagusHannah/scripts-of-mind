@@ -6,10 +6,10 @@
 * ~~Scroll To the top~~
 * ~~Append list to Posts~~
 * ~~Append Lists to projects~~
-* progress bar (today)
+* ~~progress bar (today)~~
 
 ## Style
-* Reorganize styles (today)
+* ~~Reorganize styles (today)~~
 * Each Page Unique Purpose
 * Mobile Styles
 * Timeline Posts
