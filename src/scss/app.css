@@ -797,6 +797,11 @@ h4 {
   display: none;
 }
 
+.blog-item {
+  padding-bottom: 5rem;
+  cursor: pointer;
+}
+
 .react-tabs {
   display: -webkit-box;
   display: -ms-flexbox;

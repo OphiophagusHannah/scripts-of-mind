@@ -151,7 +151,8 @@ class NumberList extends Component {
       },
       { id: 4, content: "Visualization and Graphics: Digital/Traditional" },
       { id: 5, content: "Information Visualization" },
-      { id: 6, content: "Information Architecture and structures" },
+      {
+        id: 6, content: "<a href='/projects/1' > Information Architecture</a> and structures" },
       { id: 7, content: "Conversational interfaces." },
       { id: 8, content: "High understanding of Web and Digital Interfaces." }
     ];
@@ -250,14 +251,71 @@ class NumberList extends Component {
                   </div>
                   <div className="focus-list">
                     <h2 className="h1 title-blog" data-aos="fade-left" data-aos-delay="200" >
-                      {
-                        <Link to={`/projects/1`} onClick={this.toggle.bind(this)}>
+                 
+                        
                           Personal Focus
-            </Link>
+   
 
-                      }
+                     
                     </h2>
-                    {listItems}
+
+                    <div
+
+                      data-aos="fade-left"
+                     
+                    >
+                      1. Concept and Ideation.
+    </div>
+                    <div
+
+                      data-aos="fade-left"
+                   
+                    >
+                      2. Interactive Design, UX/UI + the ways how to implement ideas into current state.
+                          </div>
+                    <div
+
+                      data-aos="fade-left"
+                      
+                    >
+                      3. Prototyping: Low/Medium/High Fidelity, Rapid Prototyping.
+                          </div>
+                    <div
+
+                      data-aos="fade-left"
+                     
+                    >
+                      4. Visualization and Graphics: Digital/Traditional.
+                          </div>
+                    <div
+
+                      data-aos="fade-left"
+                  
+                    >
+                      5. Information Visualization.
+                          </div>
+                    <div
+
+                      data-aos="fade-left"
+                     
+                    >
+                      6. {<Link to={`/projects/1`} onClick={this.toggle.bind(this)}>Information Architecture and structures.</Link>}
+                          </div>
+                    <div
+
+                      data-aos="fade-left"
+                      
+                    >
+                      7. Conversational interfaces.
+                          </div>
+                    <div
+
+                      data-aos="fade-left"
+                      
+                    >
+                      8. High understanding of Web and Digital Interfaces.
+                    </div>
+               
 
                   </div>
 

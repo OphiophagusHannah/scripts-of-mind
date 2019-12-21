@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import projects from "./projects.js";
 import PostDetail from './PostDetails';
 import { Link } from "react-router-dom";
+import ProgressBar from "react-scroll-progress-bar";
 
 class PostList extends Component {
   constructor(props) {
@@ -85,8 +86,9 @@ class PostList extends Component {
 
     return (
       <div className="home-parent" id="home-parent" >
+
         <div className={boxClass.join(' ')}>
-          {/* {loading} */}
+
           {
             this.state.posts.map(p => (
 
@@ -109,9 +111,10 @@ class PostList extends Component {
             ))
           }
 
+
         </div>
         {postDetail}
-      </div>
+      </div >
 
     );
   }
