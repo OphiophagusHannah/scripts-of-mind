@@ -25,7 +25,7 @@
 }
 
 .project-title-home {
-  padding-left: 1rem;
+  padding-left: 2rem;
   @include font_header;
   padding-top: 1rem;
   text-decoration: none;
@@ -312,4 +312,10 @@
   //   background: white;
   //   opacity: 0.8;
   // }
+}
+
+.footer {
+  padding: 2rem;
+  border-top: 1px solid grey;
+  padding-right: 50%;
 }

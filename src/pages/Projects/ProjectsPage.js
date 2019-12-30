@@ -18,6 +18,9 @@ const ProjectsPage = () => (
 
       {/* <PostList /> */}
       <div className="bottom-padding">
+        <div className="footer">
+          The purpose of this list of explorational pieces based on honesty and open representation of my thoughts, not based on the goal to sell my skillsets that do or do not exsist. In other words: I have no clue how to market myself properly.
+        </div>
         {/* <NavLink className="jump-next next-blog"  to="/about">
       thought of mine
     </NavLink> */}

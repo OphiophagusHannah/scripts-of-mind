@@ -51,7 +51,7 @@ const projects = [
     problem:
       "Precision of virtual environment experience in virtual space. Mobility",
     purpose: "",
-    note: "",
+    note: "Description of Artistic Component: Busyness of the artwork depends on the number of art piece. with larger ammount of details artwork becomes more realistic. Overall, the idea is to show the composition of reality, complexity of reality and its components, the idea of the grows and accumulation of the information, progress, absence of limits. + Reorganization of form, which underlines dynamics, constant change, flexibility and somewhat delicacy of connections.",
     structure:
       "Originally the idea was created as a potential prototype for Web Virtual Reality Gallery, which led towards two paths of possible interactions:</br></br><i>1st Path:</i> <ul><li>Full AR/ VR gallery with gesture control</li></ul><i>2nd Path:</i><ul><li>Experience with the gallery using mobile phone as controller (main goal within this path is accessibility from anywhere).</li></ul>",
     interaction:
@@ -141,11 +141,13 @@ const projects = [
     id: 8,
     slug: "l",
     status: true,
-    title: "L",
-    span: "UX/Learning/Information Architecture",
+    title: "L is for /ˈlɪŋɡwə/",
+    span: "UX/Learning/Information Architecture/D3",
     image:
       "https://rightsizefacility.com/wp-content/uploads/2017/11/verticalplaceholderimage-440x680.png",
-    content: " the story and the reason",
+    content: "the story and the reason. My exploration of linguistics and languages. Try to xreate interactive resources for those who likes to learn languages or has interest in linguistics. Another purpose of the project is to show lexical connections and semantic differences between languages",
+    structure:
+      "Parts of the project</br><ul><i><strong>01. Interactive Vowels IPA chart. Universal Languages</strong></i><li>IPA chart with entire IPA vowels library. allows to select languages and in response selects sounds that exsist in the language. There also will be an information about each sound</li><li>The future goal is to define how to compare vocal composition of the languages by percentage of similarities.</li></ul><ul><i><strong>02. Language Families Graphs and Groupings</strong></i><li>Interactive map that shows hierarchy of the language classification.</li><li>Has historical reference of how languages have been spreading around the world.</li></ul><ul><i><strong>03. Typography and writing: Research</strong></i><li>Large interactive caligraphical composition. Linear view: takes writings of different cultures and composes them together</li><li>Each language group will have different interactive effect based on the way how language feels visually and acousticly. Organization of letters and symbols should remind of language phonetics</li><li>Show sonnection between writings of different completely different languages</li><li>Display some interesting facts about language history and grammar</li></ul><ul><i><strong>04. Vocabulary builder and instant translator</strong></i></ul>",
     href: "href"
   },
   {
@@ -244,7 +246,7 @@ const projects = [
   },
   {
     id: 15,
-    title: "Concepts",
+    slug: "concepts",
     status: true,
     title: "Concepts Forms Relations",
     span: "Sensors/Data Reading/Sound/Interaction",
@@ -252,6 +254,63 @@ const projects = [
       "https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical.jpg",
     content:
       "Wholeness of the kind and wholeness of all.The image is representing accumulation and balance between all the pieces of the human world and the machine world, collected in one form. ",
+    href: "href"
+  },
+  {
+    id: 16,
+    slug: "keys",
+    status: true,
+    title: "Keys",
+    span: "Encoding/riddles/Interaction/Art",
+    image:
+      "https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical.jpg",
+    content:
+      "Two Fonts. Two texts. Two keys. Two states: 1st. key is revealed, and encription is not. There also an input field to reveal pieces of mosaic. 2nd. Encription gets revealed on hover of the piece. The purpose is to find out what the key is. the image shows very detailed building. by solving the riddle, the person can 'access' the building =). The encription is performed programmatically. Form of the project is a mosaic that composed out of the pieces. each piece is a part of the whole story. Encripted part is black and white, and revealed part is colored.",
+    purpose: "NO. I am not trying to make art not accessible here. But I want to show that sometimes, if you want to understand, achieve, or open something new for yourself, you need to put some thoughts and effort into discovery and exploration, find the way to approach the problem, or train some skill.",
+    href: "href"
+  },
+  {
+    id: 111,
+    slug: "portrait",
+    status: true,
+    title: "Portrait",
+    span: "Draft to remember",
+    content:
+      "01. Лицо. ШЕЯ. Голова. Плечи. Волосы.</br> 02. Грудь. Плечи. Живот. УКРАШЕНИЯ.</br> 03. Таз. РУКИ. Бедра.</br> 04. Колени. Голени. Низ Платья.</br> 05. Стопы. Земля.",
+    purpose: " Colorful ---> Monochrome. Details/Parts ---> Form/Solid",
+    href: "href"
+  },
+  {
+    id: 111,
+    slug: "trigonometry",
+    status: true,
+    title: "Concepts of trigonometry",
+    span: "Art based on geometry and trygonometry",
+    content:
+      "As i revision concepts of visual math. Creative graphiks",
+    purpose: "Add here",
+    href: "href"
+  },
+  {
+    id: 111,
+    title: "industrial",
+    status: true,
+    title: "Industrial and architectural design research",
+    span: "Personal learning of these fields",
+    content:
+      "As i revision concepts of visual math",
+    purpose: "Add here",
+    href: "href"
+  },
+  {
+    id: 111,
+    title: "tensor",
+    status: true,
+    title: "Tensor Flow",
+    span: "Simple Simple Machine Learning try",
+    content:
+      "As i revision concepts of visual math",
+    purpose: "Add here",
     href: "href"
   }
 ];

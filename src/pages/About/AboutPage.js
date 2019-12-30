@@ -90,7 +90,8 @@ class NumberList extends Component {
       { id: 5, content: "Art and Feelings. Technologies of Materials." },
       { id: 6, content: "Visualisation and Atmosphere." },
       { id: 7, content: "Languages; structure and encoding." },
-      { id: 8, content: "Sensors. Sensorics. Sense" }
+      { id: 8, content: "Sensors. Sensorics. Sense" },
+      { id: 8, content: "Artoficial Intellegence + Augmented Reality = Artoficial Reality. (Neural Networks and Deep Learning, AR, VR interactions)" }
     ];
 
     let aosDelay = 50;
@@ -143,7 +144,7 @@ class NumberList extends Component {
       {
         id: 2,
         content:
-          "Interactive Design, UX/UI + the ways how to implement ideas into current state"
+          "Interactive Design, UX/UI + the ways how to implement ideas into current state of the world"
       },
       {
         id: 3,
@@ -173,7 +174,7 @@ class NumberList extends Component {
       {
         id: 1,
         content:
-          "JS, Advanced CSS, SASS, PHP, Python, JSON, C#, Processing, SVG, WebGL, Three.js, D3, JQuery, React, Angular, Various Frameworks."
+          "JS, Advanced CSS, SASS, PHP, Python, JSON, C#, Processing, SVG, WebGL, Three.js, D3, JQuery, React, Angular, Various Frameworks, Python + TensowFlow and PyTorch."
       },
       {
         id: 2,
