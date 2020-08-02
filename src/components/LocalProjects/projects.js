@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     id: 1,
     slug: 'flexible-multidimention',
@@ -270,7 +270,7 @@ const projects = [
     href: "href"
   },
   {
-    id: 111,
+    id: 110,
     slug: "portrait",
     status: true,
     title: "Portrait",
@@ -292,7 +292,7 @@ const projects = [
     href: "href"
   },
   {
-    id: 111,
+    id: 112,
     title: "industrial",
     status: true,
     title: "Industrial and architectural design research",
@@ -303,7 +303,7 @@ const projects = [
     href: "href"
   },
   {
-    id: 111,
+    id: 113,
     title: "tensor",
     status: true,
     title: "Tensor Flow",
@@ -315,4 +315,3 @@ const projects = [
   }
 ];
 
-export default projects;

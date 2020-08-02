@@ -19,12 +19,14 @@
 
 .top {
   font-size: 18px;
+  height: 40px;
   position: fixed;
   left: 0;
   top: 0;
   margin: 0;
   width: 100%;
   background: white;
+
   //display: flex;
   z-index: 4;
   background: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
@@ -55,13 +57,14 @@
     margin: 0;
     padding: 0.5rem 0;
     padding-left: 1rem;
+    list-style-type: none;
   }
 
   a {
     color: white;
     text-decoration: none;
     font-family: "Montserrat";
-    display: flex;
+    // display: flex;
     font-weight: 700;
     padding: 0 1rem;
 

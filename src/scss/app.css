@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Istok+Web|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext");
 body {
   font-family: "Istok Web";
 }
@@ -300,10 +301,10 @@ h4 {
 }
 
 .fetching-box.open .close-button {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  position: sticky;
+  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -312,9 +313,10 @@ h4 {
           align-items: center;
   cursor: pointer;
   top: 3rem;
-  right: 3rem;
+  left: 94%;
   width: 3.5rem;
   height: 3.5rem;
+  border: 1px solid grey;
   color: white;
   content: "";
   font-weight: 700;
@@ -322,34 +324,6 @@ h4 {
   line-height: 14px;
   font-family: "Montserrat";
   background: linear-gradient(340deg, white 0%, white 100%);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.fetching-box.open .close-button:before {
-  display: block;
-  content: "";
-  opacity: 0.6;
-  height: 1px;
-  background: grey;
-  width: 3rem;
-  position: fixed;
-  -webkit-transform: translate(0px, 0px) rotate(-45deg);
-          transform: translate(0px, 0px) rotate(-45deg);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.fetching-box.open .close-button:after {
-  display: block;
-  content: "";
-  opacity: 0.6;
-  height: 1px;
-  background: grey;
-  width: 3rem;
-  position: fixed;
-  -webkit-transform: translate(0px, 0px) rotate(45deg);
-          transform: translate(0px, 0px) rotate(45deg);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
@@ -382,7 +356,7 @@ h4 {
 
 .fetching-box.open .post-content {
   display: block;
-  width: 70%;
+  width: 100%;
   font-size: 20px;
   line-height: 32px;
   padding-left: 5rem;
@@ -396,6 +370,7 @@ h4 {
   background: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: 70%;
 }
 
 .fetching-box.open .project-content-inner .p {
@@ -456,6 +431,7 @@ h4 {
 
 .top {
   font-size: 18px;
+  height: 40px;
   position: fixed;
   left: 0;
   top: 0;
@@ -471,15 +447,13 @@ h4 {
   margin: 0;
   padding: 0.5rem 0;
   padding-left: 1rem;
+  list-style-type: none;
 }
 
 .top a {
   color: white;
   text-decoration: none;
   font-family: "Montserrat";
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-weight: 700;
   padding: 0 1rem;
 }
@@ -982,7 +956,7 @@ h4 {
 
 .art-box.open .post-content {
   display: block;
-  width: 70%;
+  width: 100%;
   font-size: 22px;
   line-height: 32px;
 }

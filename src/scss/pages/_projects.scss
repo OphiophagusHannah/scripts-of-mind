@@ -196,15 +196,17 @@
     }
 
     .close-button {
-      position: fixed;
-      display: flex;
+      position: sticky;
+      position: sticky;
+      display: block;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       top: 3rem;
-      right: 3rem;
+      left: 94%;
       width: 3.5rem;
       height: 3.5rem;
+      border: 1px solid grey;
       //color: white;
       //border-radius: 50%;
       color: white;
@@ -215,28 +217,28 @@
       font-family: $font_bold;
       background: linear-gradient(340deg, white 0%, white 100%);
       transition: 0.3s ease;
-      &:before {
-        display: block;
-        content: "";
-        opacity: 0.6;
-        height: 1px;
-        background: grey;
-        width: 3rem;
-        position: fixed;
-        transform: translate(0px, 0px) rotate(-45deg);
-        transition: 0.3s ease;
-      }
-      &:after {
-        display: block;
-        content: "";
-        opacity: 0.6;
-        height: 1px;
-        background: grey;
-        width: 3rem;
-        position: fixed;
-        transform: translate(0px, 0px) rotate(45deg);
-        transition: 0.3s ease;
-      }
+      // &:before {
+      //   display: block;
+      //   content: "";
+      //   opacity: 0.6;
+      //   height: 1px;
+      //   background: grey;
+      //   width: 3rem;
+      //   position: fixed;
+      //   transform: translate(0px, 0px) rotate(-45deg);
+      //   transition: 0.3s ease;
+      // }
+      // &:after {
+      //   display: block;
+      //   content: "";
+      //   opacity: 0.6;
+      //   height: 1px;
+      //   background: grey;
+      //   width: 3rem;
+      //   position: fixed;
+      //   transform: translate(0px, 0px) rotate(45deg);
+      //   transition: 0.3s ease;
+      // }
 
       &:hover {
         background: linear-gradient(340deg, #ff4500 0%, #cc4499 100%);
@@ -263,7 +265,7 @@
 
     .post-content {
       display: block;
-      width: 70%;
+      width: 100%;
       font-size: 20px;
       line-height: 32px;
       padding-left: 5rem;
@@ -277,6 +279,8 @@
       background: linear-gradient(340deg, #e4ff6d 0%, #ff4500 47%, #aa00ff 77%, #cc4499 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      width: 70%;
 
       .p {
         background-clip: none;
